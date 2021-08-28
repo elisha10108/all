@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "60082ef38e16d33d54231770"
+  },
+  "user": "koko",
+  "email": "koko@walla.com",
+  "pass": "123"
+},{
+  "_id": {
+    "$oid": "60082ef38e16d33d54231771"
+  },
+  "user": "biden",
+  "email": "biden@walla.com",
+  "pass": "123"
+}]

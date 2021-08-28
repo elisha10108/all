@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script src="util_js/elem.js"></script>
+  <script src="util_js/addInput.js"></script>
+  <script>
+    window.onload = function () {
+      createInputs();
+      viewEvents()
+    }
+
+    function createInputs(){
+      addInput("#inside_form","id_input","Enter user:","text")
+      addInput("#inside_form","id_email","Enter Email 33:","text")
+      addInput("#inside_form","id_email2","Enter Email again: ","text")
+      addInput("#inside_form","id_pass","Enter pass:","password")
+    }
+
+    function viewEvents() {
+      document.querySelector("#sign_btn").addEventListener("click", function () {
+        // בודק שיש מנימום 2 אותיות בשם 
+        if (dq("#id_input").value.length < 2) {
+          return alert("Enter valid name , min 2 charts !");
+        }
+        // בודק שהאימייל תקני לפי זה שקיים שטרודל ונקודה
+        if (dq("#id_email").value.indexOf("@") == -1 || dq("#id_email").value.indexOf(".") == -1) {
+          return alert("Enter valid email , stupid!!!!");
+        }
+        // אם האימייל הראשון זהה לאימייל השני
+        if (dq("#id_email").value != dq("#id_email2").value) {
+          return alert("Emails intputs not the same, check your self!!!!");
+        }
+        // בודק את אורך הסיסמא
+        if (dq("#id_pass").value.length < 3) {
+          return alert("Enter valid Password , min 3 charts !");
+        }
+        alert("send success");
+      })
+
+      document.querySelector("#id_pass").addEventListener("input", function () {
+        let strong = "weak";
+        let color = "red";
+        if (dq("#id_pass").value.length > 2) {
+          strong = "medium";
+          color = "gold";
+        }
+        if (dq("#id_pass").value.length > 5) {
+          strong = "strong";
+          color = "green";
+        }
+        dq("#id_pass_status").innerHTML = strong;
+        dq("#id_pass_status").style.color = color;
+      })
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form">
+      <div id="inside_form">
+        <!-- <div>
+          <label for="id_input">Enter name:</label>
+          <input id="id_input" type="text" class="col-lg-6 form-control">
+        </div> -->
+        <!-- <div>
+          <label for="id_email">Enter Email:</label>
+          <input id="id_email" type="text" class="col-lg-6 form-control">
+        </div> -->
+        <!-- <div>
+          <label for="id_email2">Enter Email again:</label>
+          <input id="id_email2" type="text" class="col-lg-6 form-control">
+        </div> -->
+        <!-- <div>
+          <label for="id_pass">Enter Password:</label>
+          <input id="id_pass" type="text" class="col-lg-6 form-control">
+        </div> -->
+      </div>
+      <h3>Password is: <span id="id_pass_status">--</span></h3>
+      <button id="sign_btn" class="btn btn-info mt-4">signup</button>
+    </div>
+  </div>
+</body>
+
+</html>

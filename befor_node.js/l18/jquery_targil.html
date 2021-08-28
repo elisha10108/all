@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    $(() => {
+      init();
+    
+    });
+
+    const init = () => {
+      $("#id_div").hide();
+      declareChangeBtnColor();
+      viewEvents();
+    }
+
+    const viewEvents = () => {
+      $("button[data-color]").on("click",function(){
+        $("#id_div").slideDown(800);
+        let dataColor = $(this).data("color");
+        // HTML = יטמל
+        // במקרה הזה אנחנו אוספים את האיינר יטמל 
+        let btnInnerHTML = $(this).html();
+        $("#id_div").html(`
+          The car is: ${btnInnerHTML} , and its color: ${dataColor};
+        `)
+      })
+    }
+
+    const declareChangeBtnColor = () => {
+
+      // let btns_ar = document.querySelectorAll("button[data-color]");
+      // btns_ar.forEach(itemElem => {
+      //   let dataColor = itemElem.dataset.color;
+      //   itemElem.style.background = dataColor;
+      // })
+//11:00 להיות כאן
+
+      $("button[data-color]").each(function() {
+        let dataColor = $(this).data("color");
+        $(this).css("background",dataColor);
+      })
+
+
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <button data-color="red">Toyota</button>
+    <button data-color="green">Mazda</button>
+    <button data-color="orange">Opel</button>
+    <button data-color="blue">Ferrari</button>
+    <div id="id_div" class="text-center" style="width:400px; height:300px; background:silver;"></div>
+  </div>
+
+</body>
+
+</html>

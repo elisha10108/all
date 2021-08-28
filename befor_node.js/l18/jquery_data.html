@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    // $(document).ready(()={
+
+    // })
+    // זה לשורה למעלה של דוקמנט ראדי
+    $(() => {
+      init();
+    })
+
+    const init = () => {
+      viewEvents();
+    }
+
+    const viewEvents = () => {
+      // כתבנו פונקציה רגילה ולא פונקצייץ חץ כדי שנוכל לדבר עם האלמנט עצמו
+      // והטיז לא יתייחס לדוקמנט שזה הסבא שלו
+      $("p[data-pic]").on("mouseover",function(){
+        let dataPic = $(this).data("pic");
+        // document.querySelector("#id_img").src = dataPic;
+        $("#id_img").attr("src",dataPic);
+      })
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <p>koko mom</p>
+    <p data-pic="images/pic1.jpg">Moshe cohen</p>
+    <p data-pic="images/pic2.jpg">Koko akof</p>
+    <p data-pic="images/pic3.jpg">Biden junior</p>
+    <p data-pic="images/pic4.jpg">Trump junior</p>
+    <img id="id_img" src="images/pic4.jpg">
+  </div>
+</body>
+
+</html>

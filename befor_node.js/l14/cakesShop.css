@@ -1,0 +1,20 @@
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header{
+  min-height: 300px;
+  background: grey;
+  background-image: url(images/pic2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+header h1{
+  color: #FFFFFF;
+/* background: #F7C1C1; */
+text-shadow: 4px 3px 0px #7A7A7A;
+}

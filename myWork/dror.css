@@ -1,0 +1,13 @@
+.img_haed{
+    display: block; 
+     margin: 0 auto;
+     font-size: 2rem !important;
+    transition: 10000ms;
+ z-index: 999 !important;
+  
+}
+.img_haed:hover{
+    transform: translate(10px, 30px) rotate(3600deg) translateX(30px);
+
+
+}

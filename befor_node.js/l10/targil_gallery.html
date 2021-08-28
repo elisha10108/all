@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = function(){
+      let counter = 100 ;
+      for(let i = 0 ; i < 5 ; i++){
+       
+        document.body.innerHTML += `<img src="images/pic2.jpg" width="${counter}" > ${counter}<br>`;
+        counter += 50;
+      }
+
+      for(let i = 0 ; i < 5 ; i++){
+        let w = 100 + i * 50;
+        document.body.innerHTML += `<img src="images/pic1.jpg" width="${w}" > ${w}<br>`;
+      }
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

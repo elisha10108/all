@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <style>
+    .left_side{
+      min-height: 400px;
+      background-color: purple;
+    }
+
+    .right_side .row > div{
+      /* important  - דואג שהמאפיין בסלקטור הנוכחי יגבר על מאפיינים
+      בסלקטורים מקבילים גם אם הם יותר ספציפים מהסלקטור הנוכחי שלו */
+      min-height: 200px !important;
+    }
+
+    .box4{
+      background: hotpink;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 left_side">left side</div>
+      <div class="col-md-6 right_side ">
+        <div class="row">
+          <div class="col-6 bg-success box2">box 2</div>
+          <div class="col-6 bg-warning box3">box 3</div>
+          <div class="col-6 box4">box 4</div>
+          <div class="col-6 bg-danger box5">box 5</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

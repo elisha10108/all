@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="lodash.js"></script>
+  <script>
+    let prods_ar = [
+      {name:"apple" , price:7},
+      {name:"kiwi" , price:15},
+      {name:"banana" , price:10}
+    ]
+
+    let abc_ar = ["a","b","c","d","e"];
+
+    window.onload = () => {
+      //lodash = low dash -> בעברית זה מקף תחתון
+      // מכיל בתוכו המון פונקציות בדומה למאט שישמושיות לפיתוח
+      // כגון לסדר לפי מאפיין מערך של ג'ייסון , לעשות ערבוב ועוד
+      
+      // _ => lodash -> like $ of JQUERY ( $.ajax() )
+      // יסדר את המערך לפי מחיר
+     prods_ar = _.sortBy(prods_ar,"price");
+
+     // מערבב את התאים של המערך , נניח הראשון יהיה שני והשני יהיה רביעי וכך הלאה
+     // כמו שמערבבים חפיסת קלפים באופן רנדומלי
+      abc_ar = _.shuffle(abc_ar)
+
+      console.log(abc_ar);
+
+      console.log(prods_ar);
+      // reverse -> משנה את הסדר ובמקרה שלנו המחיר הגבוה יהיה ראשון ולא הכי נמוך בברירת מחדל
+     console.log(prods_ar.reverse());
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

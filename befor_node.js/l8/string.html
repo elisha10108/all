@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let user = "koko";
+    window.onload = init;
+
+
+    function init(){
+      document.querySelector("#id_h1").innerHTML += " World";
+      document.querySelector("#id_h2a").innerHTML = "Welcome \"  " + user + " to our site";
+      // השיטה החדשה להזריק משתנים לסטרינגים
+      // הסימן של הגרש זה בק טיק שנמצא לי ה 1 מעל הטאב מתחת לאיקספ
+      // במק הוא נמצא ליד האנטר
+      document.querySelector("#id_h2b").innerHTML = `Welcome " ' '" new ${user} to our site`;
+    }
+  </script>
+</head>
+<body>
+  <h1 id="id_h1">Hello</h1>
+  <h2 id="id_h2a"></h2>
+  <h2 id="id_h2b"></h2>
+</body>
+</html>

@@ -1,0 +1,5 @@
+main .card_img{
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+}

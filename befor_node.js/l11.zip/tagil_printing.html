@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="util_js/elem.js"></script>
+  <script>
+    let counter = 0;
+    let timer;
+    let word = "";
+    let clickPlayFlag = false;
+    window.onload = function () {
+      viewEvents();
+    }
+
+    function viewEvents() {
+      document.querySelector("#play_btn").addEventListener("click", function () {
+        // if (clickPlayFlag != true)  -> כמו לכתוב  
+        // !clickPlayFlag- > אם המשתנה שווה לפולס
+        if (!clickPlayFlag) {
+          clickPlayFlag = true;
+          clearInterval(timer);
+          counter = 0;
+          word = dq("#id_input").value;
+          timer = setInterval(function () {
+            counter++;
+            // substr -> חותך את הסטרינג מתו 0 עד לתו קאונטר
+            dq("#id_h3").innerHTML = word.substr(0, counter);
+            // אם הקאונטר גדול ממספר האותיות כלומר באות האחרונה
+            if(counter >= word.length){
+              clickPlayFlag = false;
+              clearInterval(timer);
+            }
+            // TODO: המחשב יתחיל לדפיס את המילה
+            // שהמשתמש רשם באינפוט ככה שכל חצי שניה תופיע האות
+            // הבאה
+            // 13:12 להיות כאן
+          }, 500);
+        }
+      })
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Enter word:</h2>
+  <!-- maxlength -> כמה אותיות אפשר לכתוב -->
+  <input maxlength="6" value="monkey" type="text" id="id_input">
+  <button id="play_btn">Play</button>
+  <h3 id="id_h3"></h3>
+</body>
+
+</html>

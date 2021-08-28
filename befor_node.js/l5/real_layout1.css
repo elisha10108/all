@@ -1,0 +1,88 @@
+*{
+  /* אומר לבורדר ולפדינג להתנפח כלפי פנים */
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  background: silver;
+  font-family: sans-serif;
+}
+
+/* container-fluid */
+/* אם ניתן לו רקע ישפיע על הנאב , הידר פוטר ומיין
+כי סלקטור של קלאס יותר ספציפי מסלקטור של תגית
+ולכן הוא זה שקובע ולא רק הסדר שהם רשומים בו */
+.container-fluid{
+  width:100%;
+}
+
+.container{
+  width:700px;
+  margin:0 auto;
+  /* padding:8px; */
+}
+
+nav{
+  min-height: 50px;
+  background: black;
+  color:white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+nav a{
+  /* חייבים לדבר עם התגית איי 
+  עצמה כדי להשפיע על הצבע שלה */
+  color:white;
+  /* ריווח בין לינקים */
+  padding:0 8px;
+  text-decoration: none;
+  /* עושה קווים בין הלינקים */
+  border-right:1px solid white; 
+}
+
+/* ידבר עם האח האחרון מסוג איי בנאב */
+nav a:last-of-type{
+  /* ביטול בורדר */
+  border-right:0px solid;
+}
+
+header{
+  min-height: 200px;
+  background: skyblue;
+  color:blue;
+}
+
+main {
+  min-height: 100px;
+  background: black;
+  color:white;
+}
+
+main .row{
+  display: flex;
+  /* דואג שאם הילד שלו עובר את ה100 אחוז ברוחב
+  הוא יפול לשורה הבאה */
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box_top{
+  border:1px solid white;
+  width:33.3333%;
+  min-height: 150px;
+}
+
+.box_bottom{
+  border:1px solid yellow;
+  min-height: 80px;
+  width:48%;
+}
+
+footer {
+  min-height: 50px;
+  background: grey;
+  color:white;
+}

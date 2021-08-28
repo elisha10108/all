@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function init(){
+      changeFont();
+    }
+
+    function onChangeColorClick(){
+      // אספנו מהאינפוט של המשתמש את הערך שהוא רשם באינפוט
+      // והשפענו גם על האיינר אייץ טי אם אל וגם על הרקע
+      document.getElementById("id_h1").innerHTML = document.getElementById("id_input").value;
+      document.getElementById("id_h1").style.background = document.getElementById("id_input").value;
+    }
+
+    function changeFont(){
+      document.getElementById("id_h1").style.color = document.getElementById("id_select").value;
+    }
+
+  </script>
+</head>
+<body onload="init()">
+    <h1 id="id_h1">Enter your favorite color:</h1>
+    <input id="id_input" type="text" oninput="onChangeColorClick()" >
+    <button onclick="onChangeColorClick()">change color</button>
+    <h2>Choose font color:</h2>
+    <select id="id_select"  onchange="changeFont()">
+      <option value="silver">כסוף</option>
+      <option value="red">אדום</option>
+      <option value="green">ירוק</option>
+      <option value="blue">כחול</option>
+    </select>
+</body>
+</html>

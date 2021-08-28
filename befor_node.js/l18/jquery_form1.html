@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    $(() => {
+      init();
+    })
+
+    const init = () => {
+      // $("#id_form input").on("input" , () => {
+      //  checkForm();
+      // })
+
+      $("#id_form input").on("focus", function(){
+        // דיבור עם התגית האח הקודם
+        $(this).prev().removeClass("d-none")
+      })
+
+      $("#id_form input").on("blur", function(){
+        // דיבור עם התגית האח הקודם
+        $(this).prev().addClass("d-none")
+      })
+
+      $("#id_form").on("submit",(e) => {
+        e.preventDefault();
+
+        // trim -> מוחק רווחים מסטרינג בהתחלה ובסוף כדי שנשמור מידע נקי יותר
+        // במסד נתונים או בלוקאל, במיוחד שאוספים מידע מאינפוטים חשוב להשתמש
+        let trimName = $("#id_name").val().trim();
+        console.log(trimName);
+        console.log($("#id_name").val());
+        checkForm()
+      })
+    }
+
+
+    const checkForm = () => {
+      // console.log("dsadsa")
+      // מסתיר את כל השגיאות כדי להסתיר ואתם מחדש במקרה שהם הוצוגו
+      $("#id_form input").next().addClass("d-none");
+      let name = $("#id_name").val().trim();
+ 
+        let phone = $("#id_phone").val().trim();
+        console.log(phone)
+        if(name.length < 2){
+          // ידבר עם התגית האחות הבאה שלו
+          $("#id_name").next().removeClass("d-none");
+        }
+        if(phone.length < 9){
+          $("#id_phone").next().removeClass("d-none");
+        }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <form id="id_form">
+      <label>Enter your name:</label>
+      <!-- small-> תגית טובה להצגת עזרה ושגיאות -->
+      <small class="text-info d-none">Enter name : need to be 2 charts at least</small>
+      <input type="text" id="id_name" class="d-block">
+      <small class=" text-danger d-none">Name need to be min 2 charts</small>
+      <br>
+      <label>Enter your phone:</label>
+      <small class="text-info d-none">Enter Phone : need to be 9 charts at least</small>
+      <input type="text" id="id_phone" class="d-block">
+      <small class=" text-danger d-none">Phone number must be min 9 charts</small>
+      <br>
+      <br>
+      <button>order</button>
+    </form>
+  </div>
+</body>
+</html>

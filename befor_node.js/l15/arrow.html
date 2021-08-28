@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let fruits_ar = ["apple","banana","kiwi"]
+    
+    window.onload = () => {
+      init();
+    }
+
+    const init = () => {
+      // showData(fruits_ar);
+      showData1(fruits_ar);
+      console.log(multi(6,3));
+    }
+
+    // אם הפונקציה מחזירה ערך ויש לה רק פקודה אחת ניתן למחוק את הסוגריים המסולסלות
+    // ואת המילה רטרן
+    const multi = (_x,_y) =>  _x*_y; 
+    // const multi = (_x,_y) => {return _x*_y}
+
+    const showData1 = (_ar) => {
+      console.log(_ar);
+    }
+
+    const showData = function(_ar) {
+      console.log(_ar);
+    }
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

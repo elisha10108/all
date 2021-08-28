@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    let fruits_ar = ["apple","banana222","kiwi1","orange"];
+    console.log(fruits_ar)
+
+    window.onload = () => {
+      showFruitsArrow3(fruits_ar)
+      document.body.innerHTML += `<h2>${kefel(3,5)}</h2>`;
+      document.body.innerHTML += `<h2>${kefel2(5,7)}</h2>`;
+    }
+
+// היתרון האחרון נמצא בקובץ
+// PRODCALSS.JS במה שקשור לביינד של פונקציה מאירוע בתוך מחלקה
+//const =  קבוע 
+    // אם פונקציה מחזירה ערך ויש רק פקודה אחת להחזיר אפשר לוותר על הסוגרים מסולסלות ועל מילה רטרן
+    const kefel2 = (_x,_y) => _x * _y;
+    
+
+    const kefel = (_x,_y) => {
+      return _x * _y;
+    }
+
+    // אם יש רק פרמטר אחד שנרצה להעביר ניתן לוותר על הסוגריים
+    const showFruitsArrow4 = _ar => {
+      document.body.innerHTML += _ar;
+    }
+
+    // אותו דבר עם פנקשן אקספרשן רק אין מילה פנקשן ויש חץ במקום
+    const showFruitsArrow3 = (_ar) => {
+      document.body.innerHTML += _ar;
+    }
+
+    // Function expression
+    const showFruits2 = function(_ar){
+      document.body.innerHTML += _ar;
+    }
+
+    // statement function
+    function showFruits(_ar){
+      document.body.innerHTML += _ar;
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

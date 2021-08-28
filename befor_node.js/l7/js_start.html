@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //alert("hello!");
+   
+    function init(){
+      document.getElementById("id_h2").innerHTML = "HEllo from Js!";
+      // id_h2.innerHTML = "hello from js!";
+      document.getElementById("id_h2").style.color = "red";
+      document.getElementById("id_h2").style.background = "yellow";
+
+      changeTmona();
+    }
+
+    // פונקציה שמשפיעה על הסורס של התמונה ועל הרוחב של התמונה
+    // אמורה לפעולה בהתחלה
+    function changeTmona(){
+      document.getElementById("id_pic").src = "images/refelct2.jpg";
+      document.getElementById("id_pic").width = 200;
+    }
+
+  </script>
+</head>
+<!-- onload = אירוע שבודק שהבאדי נטען -->
+<body onload="init()">
+  <h1>Welcome to JS!</h1>
+  <img id="id_pic" src="images/refelct.jpg"  >
+  <!-- מה שכתוב בין הפתיחה לסגירה של תגית
+  בשפה המקצועית השם של האזור הנל הוא
+innerHTML -->
+  <h2 id="id_h2">--</h2>
+  
+</body>
+</html>

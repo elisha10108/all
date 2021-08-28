@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // היוזר יצטרך להכניס את הטמפרטורה בחדר שלו ואם הטמפרטורה
+    // גבוהה מ 28 מעלות יוצג לו שהמצב הוט בצבע אדום
+
+    window.onload = init;
+    function init() {
+      // דואג שיוצג על ההתחלה אוקיי בירוק ולא יהיה ריק
+      onChangeTemp()
+    }
+
+    function onChangeTemp() {
+      // במקרה הזה יצרנו משתנה כדי שיהיה לי יותר סדר בעיניים מבחינת קוד
+      // ובמקום כל פעם לכתוב את כל האלמנט ווליו אני כותב רק טימפ
+      let temp = document.querySelector("#id_input").value;
+      let mySpan = document.querySelector("#id_span");
+      // < , > , <= , >= , == , === , != 
+      // && - וגם  , || - or
+
+      // אם הטמפרטורה גבוהה מ 28 אבל נמוכה מ 44 יוצג הוט
+      // ואם הטמפרטורה גבוהה מ -5 ונמוכה או שווה 21 יוצג קולד
+      // אם הטמפרטורה גבוהה מ 44 או נמוכה שווה ל 5 יהיה כתוב הלללל
+      // ברירת מחדל יהיה כתוב אוקי
+      if (temp > 28 && temp <= 44) {
+        mySpan.innerHTML = "HOT!";
+        mySpan.style.color = "red";
+      }
+      // חייבים לתת אלס איף ולא איף רגיל כדי שהאילס בסוף יבין שיש קשר בין שלושתם
+      else if(temp > - 5 && temp <= 21){
+        mySpan.innerHTML = "cold!";
+        mySpan.style.color = "skyblue";
+      }
+      else if(temp > 44 || temp <= -5) {
+        mySpan.innerHTML = "HELL!";
+        mySpan.style.color = "orange";
+      }
+
+      else {
+        mySpan.innerHTML = "OK";
+        mySpan.style.color = "greenyellow";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Enter the temp in your room:</h1>
+  <input value="25" id="id_input" type="number" oninput="onChangeTemp()">
+  <h2>The condition is: <span id="id_span"></span></h2>
+</body>
+
+</html>

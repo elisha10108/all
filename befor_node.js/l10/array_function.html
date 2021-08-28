@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let fruits_ar = ["apple","banana","kiwi","lemon","melon"];
+
+
+    window.onload = function(){
+      console.log(fruits_ar);
+      
+      // fruits_ar[4] = "orange";
+      //fruits_ar.push("orange"); // מוסיף תא בסוף המערך עם הערך שבסוגריים 
+      fruits_ar.unshift("lime");// מוסיף תא בהתחלה ודוחף את כל התאים האחרים קדימה באינדקס
+      console.log(fruits_ar);
+      
+      // let st = fruits_ar.pop(); // מוחקת את התא האחרון ומחזיר את הערך שלו
+      //let st = fruits_ar.shift() // מוחק את התא הראשון ומחזיר את כל התאים אינדקס אחורה ומחזיר את הערך של התא שנמחק
+      //console.log(st);
+      
+      // שלוש  איזה תא למחוק , 1- כמה תאים ממנו והלאה למחוק
+     //let st_ar = fruits_ar.splice(3,1); // מוחק את התא בפרמטר הראשון , ומחזיר את הערך שלו כמערך
+      let searchLemon = fruits_ar.indexOf("lemon"); // יחזיר לי את האינדקס שהוא מצא בו את הלימון
+      console.log(searchLemon)
+      //console.log(st_ar)
+      //let st_ar = fruits_ar.splice(searchLemon,1); // ימצא את לימון וימחק אותו מהתא שלו ספציפי
+      // let st_ar = fruits_ar.splice(searchLemon,0,"pineapple"); //מוסיף את האננס לפני הלימון ודוחף את התא של הלימון ואחריו אחד באינדקס
+       fruits_ar.splice(searchLemon + 1,0,"pineapple"); //מוסיף את האננס  אחרי הלימון 
+      console.log(fruits_ar);
+
+      // נעבוד בעיקר עם הספלייס עם שורה 25 ו 28
+
+    }
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

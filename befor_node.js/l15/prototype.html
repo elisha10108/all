@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="proto_js/car.js"></script>
+  <script src="proto_js/bike_chaining.js"></script>
+  <script>
+    window.onload = () => {
+      let bike = new Bike("body","BMX","red");
+      bike.render().changeColor();
+
+      let bike2 = new Bike("body","harim","blue");
+      bike2.render().changeColor();
+      //bike.changeColor();
+
+      let car = new Car("body","mazda","blue");
+      car.render();
+
+      let dt = new Date();
+      console.log(dt.dayHebrew()) // 0 - 6
+    }
+
+    // שימוש חכם בפרוטוטייפ במציאות שלנו
+    // נניח המחלקה דייט שהיא בילד אין בג'אווה סקריפט
+    // ניתן לייצר מיטודה משלנו למחלקה שנניח תחזיר לי 
+    // את שם היום בעברית
+
+    // שמייצרים מיטודה בשיטת הפרוטוטייפ חייבים
+    // לייצר עם פונקציה רגיל ולא פונקציית חץ כדי 
+    // שהטיז יתייחס למחלקה ולא לחלון
+    Date.prototype.dayHebrew = function() {
+      let dayNum = this.getDay();
+      let days_ar = ["aראשון","Aשני","Aשלישי","Aרביעי","Aחמישי","Aשישי","Aשבת"];
+      return days_ar[dayNum]
+    }
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

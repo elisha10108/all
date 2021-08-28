@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container border shadow" style="min-height: 1500px;">
+    <h1>First div</h1>
+    <textarea style="width:500px; height:300px"></textarea>
+  </div>
+  <div class="container bg-dark text-light" style="min-height: 1500px;">
+    <h1>second div</h1>
+    <div class="mb-5" data-aos="zoom-in">
+      <img src="s_images/seinfeld.jpg" width="300">
+    </div>
+    <div class="mb-5">
+      <img src="s_images/dexter.jpg" width="300">
+    </div>
+    <div data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+      <img src="s_images/simpsons.jpg" width="300">
+    </div>
+<!--  data-aos-delay="300" המתנה עד שהוא פועל
+  data-aos-duration -> מהירות האנימציה עובד עד 3000
+
+-->
+    <p data-aos="zoom-in" data-aos-duration="3000" class="border border-light mt-5 col-6">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique eaque commodi tenetur quidem, quo nesciunt repellat asperiores accusamus aperiam, illo inventore mollitia? Distinctio asperiores porro dolorem, quae autem qui ex enim sit est animi voluptate ut nam aut commodi mollitia optio veniam inventore soluta ducimus officiis. Laboriosam voluptatibus tempore qui.
+    </p>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

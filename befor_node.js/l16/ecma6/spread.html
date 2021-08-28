@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let def_ar = ["d","e","f"];
+    // ... -> מעתיק את התאים של המערך ומדביק אותם מחדש במיקום ששמתי אותם במערך החדש
+    let abc_ar = ["a","b","c",...def_ar,"g","h"];
+
+
+    console.log(abc_ar);
+    // def_ar.reverse() // מבצע ריברס לתאים של המערך
+    // def_ar.forEach(item => {
+    //   abc_ar.splice(3,0,item); // משמש אותי כדי לדחוף תאים חדשים אחרי תא 3
+    // })
+
+    let car1 = {name:"mazda",color:"red"}
+      // let car2 = {name:"mazda",color:"red"}; מה שהשורה למטה עושה מאחורי הקלעים זה להעתיק את 
+      // המאפיינים של קאר1 לתוך קאר 2 ללא ריפרנס
+      let car2 = {...car1}; // בעצם מבטל את עניין הריפרנס בקלות
+      car2.name = "ferrari";
+
+
+    
+
+    window.onload = () => {
+
+    }
+  </script> 
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h2::before {
+      content: "";
+      display: block;
+      height: 6px;
+      width: 0px;
+      background: red;
+      transition: 2000ms;
+      margin:0 auto;
+    }
+
+    h2:hover::before {
+    
+      width: 100%;
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+  <h2 style="width:100px; background: yellow;">
+    hello 
+  </h2>
+</body>
+</html>

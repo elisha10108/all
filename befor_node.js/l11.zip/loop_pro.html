@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let fruits_ar = ["apple","banana","kiwi","mango"];
+    let prices_ar = [100, 200, 1000, 500];
+    window.onload = function(){
+      createFuits();
+    }
+
+    // הכי חשוב בקובץ הנל להסתכל על הפור איץ' של שורה 32
+
+    function createFuits(){
+      //for(let i = 0; i < fruits_ar.length; i++){
+        // זההה לחלוטין לשורה למעלה שרוצים לעבור על מערך שלם בלולאה/
+      for(let i in fruits_ar){
+        let item2 = fruits_ar[i];
+        document.querySelector("#id_ul").innerHTML += `<li>${item2} -- in</li>`
+      }
+      document.querySelector("#id_ul").innerHTML += "<hr>"
+      // of -> מחזיר ישירות את הערך של אותו תא ולא את האינדקס שלו כמו באין
+      for(let item of fruits_ar){       
+        document.querySelector("#id_ul").innerHTML += `<li>${item} -- of</li>`
+      }
+      document.querySelector("#id_ul").innerHTML += "<hr>"
+      // foreach -> לולא שעוברת על המערך ישמש אותנו בעתיד כמעט תמיד דומה מאפ -שנדבר עליו בהמשך
+      // וכל פעם מפעילה פונקציה עם הפריט של אותו תא בלולאה באותו רגע
+      // i -> index , item -> הפריט בתוך התא בדומה לאוף של פור
+      fruits_ar.forEach(function(item,i){
+        document.querySelector("#id_ul").innerHTML += `<li>${i} -> ${item} -- foreach</li>`
+      })
+      document.querySelector("#id_ul").innerHTML += "<hr>"
+
+      // אפשרות נוספת אך כמעט ללא שימוש היא משמ לקרוא לפונקציה
+      // שמבצעת פעולה לכשהי על כל פריט במערך שהעברנו
+      // למשל במקרה הבא על כל מחיר נציג את המחיר שלו עם מעמ
+      prices_ar.forEach(addVat);
+
+    }
+
+ 
+    function addVat(item){
+      document.querySelector("#id_ul").innerHTML += `<li>${item }: ${item * 1.17} -- after vat</li>`
+    }
+
+    
+
+
+  </script>
+</head>
+<body>
+  <ul id="id_ul">
+
+  </ul>
+</body>
+</html>

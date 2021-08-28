@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let counter = 0;
+    let counterBomb = 30;
+
+    let timerId;
+    window.onload = function () {
+      addCounter();
+      // מפעיל את הפונקציה כל שניה
+      // setInterval(addCounter, 1000 /60);
+      timerId = setInterval(runTimer, 1000); // האינטרבל בנוסף לזה שהוא יפעיל פונקציה כל 200 מיליסיקנדס
+      //console.log(timerId)
+      // הוא גם יחזיר ערך של האיי די שלו למשתנה
+      // setTimeout(addCounter, 2000);
+    }
+
+    function runTimer() {
+      if (counterBomb > 0) {
+        counterBomb--;
+        document.querySelector("#id_h2Bomb").innerHTML = counterBomb;
+        return; // עוצר את הפקודות של הפונקציה כאן
+      }
+      document.querySelector("#id_h2Bomb").innerHTML += "Game over";
+      clearInterval(timerId) // עוצר את האינטרבל לפי האיי די שלו בסוגריים
+      // ומפסיק להריץ את הפונקציה ברקע ומשחרר זכרון
+      // else {
+      //   document.querySelector("#id_h2Bomb").innerHTML += "Game over";
+      //   clearInterval(timerId) // עוצר את האינטרבל לפי האיי די שלו בסוגריים
+      // }
+
+    }
+
+    function addCounter() {
+      counter++;
+      document.querySelector("#id_h2").innerHTML = counter;
+    }
+
+// צרו טיימר אחורה שמתחיל מ 30
+// ושמגיע ל0 שיוצג לו 
+// GAME OVER במקום מספר
+
+  </script>
+</head>
+
+<body>
+  <h2 id="id_h2"></h2>
+  <h2 id="id_h2Bomb"></h2>
+</body>
+
+</html>

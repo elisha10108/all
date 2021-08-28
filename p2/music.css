@@ -1,0 +1,76 @@
+body{
+    background: url(strip_all.jpg) no-repeat;
+    background-position: center; 
+  
+}
+#search_btn{
+   color: aliceblue;
+}
+._pading{
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+._pp{
+   
+    text-decoration: none !important;
+   color: #ffffff;
+   text-shadow: -3px 5px 0px rgba(64, 80, 80, 0.98);
+}
+._pp:hover{
+    text-decoration: none !important;
+   font-size: 20px;
+
+}
+
+
+.imgg{
+    background-image: url(strip2.jpg);
+    background-repeat: no-repeat;
+    /* background-position: center; */
+     height: 600px;
+    
+        font-size: 60px !important;
+    
+    text-align: center;
+    text-shadow: 2px 0 0px #757474, 3px 2px 0px rgba(77,0,38,0.5), 3px 0 3px #ffffff, 5px 0 3px #72696a, 6px 2px 3px rgba(14, 13, 13, 0.5), 6px 0 9px #3b3430, 8px 0 9px #928d8a, 9px 2px 9px rgba(77,25,0,0.5), 9px 0 18px #9b9a95, 11px 0 18px #dfd7b2, 12px 2px 18px rgba(77,66,0,0.5), 12px 0 30px #a2a595, 14px 0 30px #b6b9a7, 15px 2px 30px rgba(211, 212, 207, 0.5), 15px 0 45px #c5c9c1, 17px 0 45px #408000, 17px 2px 45px rgba(190, 180, 180, 0.5), -27px 13px 6px rgba(28,140,141,0.98)
+}
+
+
+.fa_fa{
+    color: none;
+    color:rgb(210, 255, 209) !important;
+    font-size: 2rem !important;
+    transition: 10000ms;
+ z-index: 999 !important;
+}
+.fa_fa:hover{
+    transform: translate(10px, 30px) rotate(3600deg) translateX(30px);
+
+
+}
+
+@media screen and (max-width:768px){
+    body{
+        background-size: cover;
+        background-position: 37% 50%; 
+    }
+
+    .imgg{
+        background-image: url(strip2.jpg);
+        background-position:center;
+
+        }
+}
+@media screen and (max-width:570px){
+ .mar{
+     margin-right: 0 !important;
+ }
+ #id_input{
+     width: 95px !important;
+ }
+}
+@media screen and (max-width:427px){
+.text{
+    font-size: 40px !important;
+}
+}

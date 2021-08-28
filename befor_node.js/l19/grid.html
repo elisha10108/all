@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="grid.css">
+  <title>Document</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="plugins/changeColor.js"></script>
+  <script>
+    $(() => {
+      $("main h2").colorPlug("red","yellow");
+      $("#plug_btn").showAlert("hello from plug");
+    })
+  </script>
+</head>
+
+<body>
+  <header class="container-fluid d-flex text-center align-items-center">
+    <div class="container">
+      <h1 class="display-3">Best Cakes site</h1>
+    </div>
+  </header>
+  <main class="container-fluid py-4">
+    <div class="container">
+      <button id="plug_btn">click from plug</button>
+      <h2>Gallery of images:</h2>
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="grid_gallery">
+            <div style="background-image: url(images/pexels-photo-207691.jpeg);"></div>
+            <div style="background-image: url(images/pic1.jpg);"></div>
+            <div style="background-image: url(images/pic2.jpg);"></div>
+            <div style="background-image: url(images/pic3.jpg);"></div>
+            <div style="background-image: url(images/pic4.jpg);"></div>
+            <div style="background-image: url(images/pexels-photo-207691.jpeg);"></div>
+            <div style="background-image: url(images/pic1.jpg);"></div>
+            <div style="background-image: url(images/pic2.jpg);"></div>
+            <div style="background-image: url(images/pic3.jpg);"></div>
+            <div style="background-image: url(images/pic4.jpg);"></div>
+            <div style="background-image: url(images/pexels-photo-207691.jpeg);"></div>
+            <div style="background-image: url(images/pic1.jpg);"></div>
+            <div style="background-image: url(images/pic2.jpg);"></div>
+            <div style="background-image: url(images/pic3.jpg);"></div>
+            <div style="background-image: url(images/pic4.jpg);"></div>
+            <!-- <img src="images/pic1.jpg" >
+            <img src="images/pic2.jpg" >
+            <img src="images/pic3.jpg" >
+            <img src="images/pic4.jpg" >
+            <img src="images/pexels-photo-207691.jpeg" >
+            <img src="images/pic1.jpg" >
+            <img src="images/pic2.jpg" >
+            <img src="images/pic3.jpg" >
+            <img src="images/pic4.jpg" >
+            <img src="images/pexels-photo-207691.jpeg" >
+            <img src="images/pic1.jpg" >
+            <img src="images/pic2.jpg" >
+            <img src="images/pic3.jpg" >
+            <img src="images/pic4.jpg" >
+            <img src="images/pexels-photo-207691.jpeg" > -->
+          </div>
+        </div>
+        <aside class="col-lg-3 border">
+          <div class="card w-100" >
+            <img class="card-img-top" src="images/pexels-photo-207691.jpeg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

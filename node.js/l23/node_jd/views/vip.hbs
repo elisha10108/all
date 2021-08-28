@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 class="text-info">Welcome to VIP</h1>
+  <h2>{{title}}</h2>
+  <div class="row">
+    {{!-- ar.forEach --}}
+    {{!-- נכנסים ללולאה שדומה לפור איץ --}}
+    {{#each ar}}
+      <div class="col-lg-6 border p-2">
+        {{!-- אין צורך לכתוב אייטם  --}}
+        <img src="{{image}}" alt="{{name}}" class="float-end ms-2 w-25">
+        <h2>{{name}} : </h2>
+        <div>Company: {{source}}</div>
+        <div>Country: {{country}}</div>
+
+      </div>
+
+    {{/each}}
+  </div>
+<hr>
+  <div class="">
+    {{!-- like ar[0].name  --}}
+
+    <h2>{{ar.1.name}}</h2>
+  </div>
+</div>

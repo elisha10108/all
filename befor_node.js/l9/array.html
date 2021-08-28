@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let abc_ar;
+
+    window.onload = function(){
+      // דרך ישנה
+      // abc_ar = new Array()
+      // דרך חדשה
+      //         0   1   2   3
+      abc_ar = ["a","b","c","d"];
+      abc_ar[2] = "Z";
+      console.log(abc_ar);
+      document.querySelector("#id_h2a").innerHTML = abc_ar[3]
+    }
+  </script>
+</head>
+<body>
+  <h2 id="id_h2a"></h2>
+  <button>next</button>
+</body>
+</html>

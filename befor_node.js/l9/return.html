@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script>
+    window.onload = function(){
+      eilatPirce(117);
+      document.querySelector("header").innerHTML = createH2("Title 1","yellow");
+      document.querySelector("main").innerHTML += createBox("images/pic5.jpg","shrek","the green monster");
+
+      document.querySelector("footer").innerHTML += createH2("Title 3","white")
+      document.querySelector("footer").innerHTML += eilatRtPrice(234);
+
+      alert(eilatRtPrice(50));
+    }
+
+
+    function eilatPirce(_price) {
+      document.querySelector("main").innerHTML = _price / 1.17;
+    }
+
+
+    function createBox(_img,_title,_info) {
+      return `
+      <div class="border p-2 col-lg-6 overflow-hidden">
+        <img src="${_img}" class="w-25 float-left mr-2" alt="koko">
+        <h3>${_title}</h3>
+        <p>${_info}</p>
+      </div>
+      `
+    }
+
+
+    function createH2(_txt,_color){
+      // ברגע שיש פקודה רטרן הפונקציה עוצרת את עצמה
+      return `<h2 style="color:${_color}">${_txt}</h2>`;
+    
+    }
+
+    // פונקציה שמחזירה ערך
+    function eilatRtPrice(_price){
+      return _price/1.17;
+      // let rt = _price / 1.17;
+      // return rt;
+    }
+  </script>
+
+
+
+</head>
+<body>
+  <div class="container">
+    <header class="bg-info">header</header>
+    <main></main>
+    <footer class="bg-danger"></footer>
+  </div>
+</body>
+</html>

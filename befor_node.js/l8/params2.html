@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script>
+    window.onload = init;
+
+    function init() {
+      addWorker("images/pic1.jpg","moshe ofnik","600 nis","israel");
+      addWorker("images/pic2.jpg","jack cohen","8000 nis","england");
+      addWorker("images/pic3.jpg","spider man","100 nis","kongo");
+    }
+
+    function addWorker(_img,_name,_salary,_country){
+      document.querySelector("#id_row").innerHTML += `
+      <div class="col-lg-6 border p-2">
+        <img src="${_img}" alt="${_name}" class="w-25 float-left mr-2">
+        <h2>${_name}</h2>
+        <div>Salary: ${_salary}</div>
+        <div>Country: ${_country}</div>
+      </div>
+      `;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>List of workers:</h1>
+    <div class="row" id="id_row">
+      <!-- <div class="col-lg-6 border p-2">
+        <img src="images/pic1.jpg" alt="koko akof" class="w-25 float-left mr-2">
+        <h2>Koko akof</h2>
+        <div>Salary: 100$</div>
+        <div>Country: india</div>
+      </div> -->
+
+    </div>
+  </div>
+</body>
+
+</html>

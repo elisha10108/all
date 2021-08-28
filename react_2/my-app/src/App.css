@@ -1,0 +1,62 @@
+
+.s_screen{
+    /* background-image: url("./pexels-carolina-castilla-arias-1716861.jpg"); */
+    background-image: url("./8.jpg");
+    /* background-repeat: no-repeat; */
+    background-position: center; 
+
+    /* height: 405vh; */
+    height: 210vh;
+
+}
+.s_screen2{
+    /* background-image: url("./pexels-carolina-castilla-arias-1716861.jpg"); */
+    background-image: url("./8.jpg");
+    background-repeat: no-repeat;
+    background-position: center; 
+
+    height: 130vh;
+
+}
+@media only screen and (max-width: 768px) {
+    .s_screen{
+    height: 300vh;
+}
+
+
+}
+@media only screen and (max-width: 576px) {
+    .s_screen{
+    height: 425vh;
+}
+.toMidel{
+  margin: 0 0 0 140px;
+
+}
+
+}
+@media only screen and (max-width: 470px) {
+
+.toMidel{
+  margin: 0 0 0 100px;
+
+}
+
+}
+@media only screen and (max-width: 380px) {
+
+.toMidel{
+  margin: 0 0 0 25px;
+
+}
+
+}
+@media only screen and (max-width: 280px) {
+
+.toMidel{
+  margin: 0 0 0 0;
+
+}
+
+}
+

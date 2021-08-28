@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let prods_ar = [
+      {name:"kiwi",price:40},
+      {name:"orange",price:8},
+      {name:"banana",price:12},
+      {name:"apple",price:4},
+      {name:"mango",price:9},
+    ]
+
+    let search_ar = ["orange","apple"];
+
+    // let expinsive_ar = prods_ar.filter(item => {
+    //   return (item.price > 10);
+    // })
+    let expinsive_ar = prods_ar.filter(item => (item.price > 10));
+
+    // להחזיר פירות שיש להם צירוף של האות איי אן
+    let an_fruits = prods_ar.filter(item => (item.name.includes("an")))
+
+    let searchFruits_ar = prods_ar.filter(item => {
+      // מחזיר את המוצרים שיש להם במפאיין השם תא במערך של
+      // SEARCH_AR
+      // למשל בעתיד נקבל רשימה של 200 פלוס מדינות ונרצה לשלוף מידע
+      // רק על חלק מהן
+      return search_ar.includes(item.name) ;
+    })
+
+    console.log("search fruits",searchFruits_ar); // [item -> orange , item -> apple]
+
+    console.log("exp",expinsive_ar);
+    console.log("an",an_fruits);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

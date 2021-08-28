@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = () => {
+      init();
+    }
+
+    const init = () => {
+      let urlApi = "http://fs1.co.il/bus/phones/list.php"
+      // שמשויים במיידית משתנה לג'אווה סקריפט בברירת מחדל
+      // הוא מחזיר לו את התשובה באותו רגע למרות שיכול להיות שהפונקצהי
+      // צריכה להחזיר מידע אסיכרוני ולכן נקבל אנדיפיינד
+      // let data = doApi(urlApi);
+      // console.log(data);
+
+      // יתרון נוסף של הפרומיס שמאפשר לייצר פונקציה
+      // שמחזיר בסופו של דבר מידע בצורה אסיכרונית
+      doApi(urlApi)
+      // ה טין לא יתבצע עד שאין ריסולב מהפונקציה המקורית
+      .then(data => {
+        console.log(data);
+      })
+      // יעבוד כאשר יש טעון והקצץ' תפוס
+      .catch(err => {
+        console.log(err);
+      })
+    }
+
+
+    const doApi = (_url) => {
+      return new Promise((resolve, reject) => {
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", _url)
+        xhr.addEventListener("readystatechange", () => {
+          if (xhr.status == 200 && xhr.readyState == 4) {
+            console.log("done request api")
+            // בעיה בשיטה הזאתי שברירת מחדל ג'אווה סקריפט
+            // מחזיר רק פקודות סינכרוניות באותו הרגע
+            resolve(JSON.parse(xhr.response))
+          }
+          else if(xhr.status >= 300){
+            reject("error , not good!!!")
+          }
+        })
+
+        xhr.send();
+      })
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

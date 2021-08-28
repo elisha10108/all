@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = init;
+
+    function init() {
+
+    }
+
+    function onChangeColor() {
+      let myColor = document.querySelector("#id_input").value;
+      if (myColor == "black" || myColor == "green") {
+        alert("Your color is ugly ");
+        document.querySelector("#id_body").style.background = "pink";
+      }
+      else {
+        document.querySelector("#id_body").style.background = myColor;
+      }
+    }
+
+    // בקשו מהמשתמש לכתוב בתוך אינפוט את הצבע המעודף עליו
+    // כאשר הוא ילחץ על כפתור ציינג קולור צבע הרקע של כל הבאדי
+    // יהפוך לצבע שהמשתמש כתב
+    // אם המשתמש רשם את הצבע שחור או ירוק
+    // תרשמו לו הודעה אלרט שהצבע שהוא בחר מגעיל ותהפכו את הצבע לוורוד
+   //בונוס במקום
+    // אם המשתמש כתב שחור הכתב יהפוך להיות לבן
+    // ואם המשתמש כתב ירוק הכתב יהיה צהוב
+  </script>
+</head>
+
+<body id="id_body">
+  <h1>Enter you favorite color:</h1>
+  <input id="id_input" type="text">
+  <button onclick="onChangeColor()">change color</button>
+</body>
+
+</html>

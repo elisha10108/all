@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    // LAZY LOADING - הרעיון שלא להציג ישירות בעיקר תמונות ששוקלות המון אם המשתמש עדיין לא גלל לאיזור שלהם
+    // את החלון
+
+    $(() => {
+      viewEvents();
+    })
+
+    const viewEvents = () => {
+      $(window).on("scroll", () => {
+        let windowTop = $(window).scrollTop();
+        let windowHeight = $(window).height();
+        $("div[data-img]").each(function(){
+          let dataImg = $(this).data("img");
+          // משתנה שמכיל את נקודת 0 של המיקום של הוואי של הדיב ביחס למסמך
+          let divImgTopY = $(this).offset().top;
+          if(windowTop + windowHeight >= divImgTopY){
+            $(this).html(`<img src="${dataImg}">`);
+          }
+        })
+      })
+    }
+  </script>
+  <style>
+    img{
+      width:300px;
+    }
+
+    div[data-img] {
+      min-height: 50px;
+      border:2px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container bg-white border" style="min-height: 1200px;">
+    <h2>First div</h2>
+    <h3 id="id_h3">new line</h3>
+  </div>
+  <div class="container bg-success" style="min-height: 200px;">
+    <h2>second div</h2>
+    <div data-img="images/pic1.jpg"> </div>
+    <div data-img="images/pic2.jpg"> </div>
+    <div data-img="images/pic3.jpg"> </div>
+    <div data-img="images/pic4.jpg"> </div>
+    
+  </div>
+</body>
+
+</html>

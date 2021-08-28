@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    // like document ready
+    $(() => {
+      viewEvents();
+    })
+
+    const viewEvents = () => {
+      $(window).on("scroll", () => {
+        // ברגע שנגיע להכי למטה יוצג לנו הדיב עם הקלאס בוקס
+        // הגובה של המסמך
+        let dHeight = $(document).height();
+        // הגובה של החלון
+        let wHeight = $(window).height();
+
+        // נקודת הוואי של החלון שלנו
+        let windowYTop = $(window).scrollTop();
+        // בדיקה שגללנו עד למטה
+        // wHeight + windowYTop =  הנקודה התחתית של הגלילה של החלון
+        if (wHeight + windowYTop >= dHeight ){
+          $(".box").show(800);
+        }
+        // ברגע שמגיעים לתמונה שלא נטענה בגלילה ניקח את הדאטא שלה ונשים אותו בסורס
+        $("img[data-imgurl]").each(function(){
+          // הנקודה העליונה של התמונות
+          let imgY = $(this).offset().top;
+          //console.log(imgY)
+          // wHeight + windowYTop = את הנקודה התחתית של הגלילה של החלון
+          // ברגע שהנקודה התחתונה של החלון מגיע לנקודה העליונה של התמונה
+          // התמונה תוצג
+          if(wHeight + windowYTop >= imgY){
+            let imgUrl = $(this).data("imgurl");
+            $(this).attr("src",imgUrl);
+          }
+        })
+      })
+    }
+  </script>
+  <style>
+    .box {
+      width: 400px;
+      height: 200px;
+      background: black;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      padding: 8px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container bg-success" style="height: 1500px;">
+    <h1>Top area</h1>
+  </div>
+  <div class="container bg-warning" style="height: 1500px;">
+    <h1>bottom area</h1>
+    <img data-imgurl="images/pexels-photo-207691.jpeg" src="images/loading.gif" alt="worker" width="500">
+    <br>
+    <img data-imgurl="images/pic2.jpg" src="images/loading.gif" alt="worker">
+    <br>
+    <img data-imgurl="images/pic3.jpg" src="images/loading.gif" alt="worker">
+    <br>
+    <img data-imgurl="images/pic4.jpg" src="images/loading.gif" alt="worker">
+    <div class="box">
+      Do like !!!
+    </div>
+  </div>
+</body>
+
+</html>

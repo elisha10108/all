@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    // let abc_ar = new Array();
+    // [] = new Array()
+    //             0 , 1 , 2 , 3
+    let abc_ar = ["a", "b", "c", "d","e"];
+    let counter = 0;
+
+    console.log(abc_ar);
+
+    window.onload = function () {
+      resetApp();
+    }
+
+    function resetApp() {
+      counter = 0;
+      document.querySelector("#id_h2").innerHTML = abc_ar[counter];
+    }
+
+    function nextLetter() {
+      // כדי לבדוק שהוא לא גדול מהתא האחרון צריך להוציא את מספר התאים ולהחסיר אותם באחד
+      // מכיוון שהתא הראשון מתחיל מ 0 
+      if (counter < abc_ar.length - 1) {
+        counter++;
+        document.querySelector("#id_h2").innerHTML = abc_ar[counter];
+      }
+    }
+
+    function backLetter(){
+      if(counter > 0){
+        counter--;
+        document.querySelector("#id_h2").innerHTML = abc_ar[counter];
+      }
+    }
+
+    // לעשות שגם הכפתור בק יעבוד ויתקע על האות איי
+
+
+  </script>
+</head>
+
+<body>
+  <h2 id="id_h2"></h2>
+  <button onclick="backLetter()">back</button>
+  <button onclick="nextLetter()">next</button>
+</body>
+
+</html>

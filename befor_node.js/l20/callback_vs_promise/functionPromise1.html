@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = () => {
+      init();
+    }
+
+
+    const init = () => {
+      // בדרך כלל פרומיס יגיע מפונקציה
+      cleanGarden()
+      .then(data => {
+        console.log(data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    }
+
+    const cleanGarden = () => {
+      let prom = new Promise((resolve,reject) => {
+        let cleanRoom = false;
+        if(cleanRoom){
+          // then יפעיל את 
+          resolve("go play xbox")
+        }
+      
+        else{
+          // יפעיל את הקטץ'
+          reject("go to clean the garden for 2 hours !!!!")
+        }
+      })
+      return prom;
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

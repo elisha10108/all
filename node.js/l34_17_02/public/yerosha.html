@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    class Car{
+      constructor(_name,_year){
+        this.name = _name;
+        this.year = _year;
+        this.render();
+      }
+
+      render(){
+        document.body.innerHTML += `<h2>${this.name} - year:${this.year}</h2>`;
+      }
+    }
+
+    class Truck extends Car{
+      constructor(_name,_year,_kg){
+        super(_name,_year);
+        this.kg = _kg;
+      }
+
+      renderKg(){
+        document.body.innerHTML += `<h3>${this.kg}</h3>`
+      }
+
+    }
+
+    window.onload = () => {
+      let car = new Car("mazda",2010);
+      let truck = new Truck("volvo",1900,"10T");
+      truck.renderKg();
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

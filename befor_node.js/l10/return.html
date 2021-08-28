@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script>
+    window.onload = function(){
+      
+      document.querySelector("header").innerHTML = targil(50,10);
+      document.querySelector("footer").innerHTML = addGallery(3,"flag");
+      document.querySelector("main").innerHTML = addGallery(4,"pic");
+    }
+
+
+    function addGallery(_countPic,_namePicGroup){
+      // מגדיר כסטרינג ריק כדי שנוכל בלולאה להוסיף עוד
+      let rt = "";
+      for(let i = 0 ; i < _countPic ; i++){
+        rt += `<img src="images/${_namePicGroup}${i+1}.jpg" width='100' />`;
+      }
+      return rt;
+    }
+
+// דוגמא התחלתית לפונקציה שמחזירה ערך של 2 מספרים שהיא מחלקת
+    function targil(_x,_y){
+      return _x / _y;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header class="bg-info">header</header>
+    <main class="bg-dark text-white">main</main>
+    <footer class="bg-danger">footer</footer>
+  </div>
+</body>
+</html>

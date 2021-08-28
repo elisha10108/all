@@ -1,0 +1,9 @@
+nav a{
+  /* color:White; */
+  padding:0 12px;
+  text-decoration: none;
+}
+
+nav a:hover{
+  color:orange;
+}

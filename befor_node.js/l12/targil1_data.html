@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script>
+    window.onload = function(){
+      viewEvents();
+    }
+
+    function viewEvents(){
+      // מחזיר ליסט משהו שממש דומה למערך וניתן לבצע עליו פור איץ
+      // p[data-pic] -> ידבר עם כל פי שיש לו את האטרביוט בסוגריים המרובעים
+      let p_ar = document.querySelectorAll("p[data-pic]");
+      console.log(p_ar);
+      // itemElem = תגית פי והוא עובר על כולם בלולאה
+      p_ar.forEach(function(itemElem){
+        itemElem.addEventListener("mouseover",function(e){
+               let imgUrl = e.target.dataset["pic"];
+              document.querySelector("#id_img").src = imgUrl
+        })
+        itemElem.addEventListener("mouseout",function(e){
+
+              document.querySelector("#id_img").src = ""
+        })
+      })
+
+      // document.querySelector(`#id_mark`).addEventListener("mouseover",function(e){
+      //   let imgUrl = e.target.dataset["pic"];
+      //   document.querySelector("#id_img").src = imgUrl
+      // })
+
+
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <p id="id_mark" data-pic="images/mark.jpg" >Mark zuki</p>
+    <p id="id_bill" data-pic="images/bill.jpg">Bill gates</p>
+    <p data-pic="images/warn.jpg">Warn buffet</p>
+    <img id="id_img" src="" >
+  </div>
+</body>
+</html>

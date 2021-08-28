@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    window.onload = init;
+    function init() {
+      onChangeTemp()
+    }
+
+    function onChangeTemp() {
+      let temp = document.querySelector("#id_input").value;
+      let mySpan = document.querySelector("#id_span");
+
+      if (temp > 28 && temp <= 44) {
+        changeSpan("HOT!!!","red","pink");
+      }
+      else if (temp > - 5 && temp <= 21) {
+        changeSpan("cold!!!","blue","aqua");
+      }
+      else if (temp > 44 || temp <= -5) {
+        changeSpan("HELL!!!","orange","black");
+      }
+
+      else {
+        changeSpan("Ok!","green","greenyellow");
+      }
+    }
+
+// לפרמטרים אוהבים לתת מקף תחתון פונקציה
+// והרעיון של פונקציה עם פרמטרים זה לחסוך לי קוד שחזור על עצמו
+// שאני אוכל להעביר לו פרמטרים ובשורה אחת לחסוך לפעמים קוד של 10 שורות
+    function changeSpan(_txt, _font, _bg) {
+      let mySpan = document.querySelector("#id_span");
+      mySpan.innerHTML = _txt;
+      mySpan.style.color = _font;
+      mySpan.style.background = _bg;
+    }
+
+    // D.R.Y
+    //DONT REPEAT YOURSELF!
+  </script>
+</head>
+
+<body>
+  <h1>Enter the temp in your room:</h1>
+  <input value="25" id="id_input" type="number" oninput="onChangeTemp()">
+  <h2>The condition is: <span id="id_span"></span></h2>
+</body>
+
+</html>

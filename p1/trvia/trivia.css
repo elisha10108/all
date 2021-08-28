@@ -1,0 +1,14 @@
+.one_div{
+    height: 500px;
+
+}
+.one_p{
+    font-size: 5em;
+}
+@media screen and (max-width:768px){
+
+    .one_p{
+        font-size:3em;
+    }
+
+}

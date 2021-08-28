@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    let colors_ar = ["red","gold","green","gold"];
+    let counter = 0;
+    let timer;
+
+    window.onload = function(){
+      updateColor()
+      viewEvents();  
+    }
+
+    function viewEvents(){
+      document.querySelector("#play_btn").addEventListener("click",function(){
+        clearInterval(timer);
+        timer = setInterval(updateColor, 1000);
+        //alert("play")
+      })
+
+      document.querySelector("#stop_btn").addEventListener("click",function(){
+        clearInterval(timer);
+      })
+
+    }
+
+    function updateColor(){
+      // במקום לעבוד עם איף ניתן לעבוד עם מודול (האחוז)
+     // שבעצם נותן שארית וככה בקלות אני יכול לעשות לופ 
+     // אין סופי על המערך שלי
+     // רק לזכור שאם המספר מצד שמאל לאחוז קטן מהספר מצד ימין
+     // אז התוצאה תמיד תיהיה המספר מצד שמאל
+     // דוגמא
+     // 2%4 -> 2
+      document.querySelector("#id_h2").style.background = colors_ar[counter % colors_ar.length]; 
+      counter++;
+      // if(counter == colors_ar.length){
+      //   counter = 0;
+      // }
+    }
+
+
+  </script>
+</head>
+<body>
+  <h2 id="id_h2">Traffic lights</h2>
+  <button id="play_btn">Play</button>
+  <button id="stop_btn">Stop</button>
+</body>
+</html>

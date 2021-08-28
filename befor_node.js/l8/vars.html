@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // let -> VAR החדש
+    let haim = 5;
+    let nikod = 100;
+    let shem = "Mario";
+    
+    window.onload = init;
+    function init(){
+      // opreator of MAth : * , - , / , + , % - שארית
+      //nikod = haim * 10;
+      //nikod = nikod + 20;
+      nikod += 20;
+
+      // nikod += 1;
+      nikod++;
+      
+      document.querySelector("#id_lives").innerHTML = haim;
+      document.querySelector("#id_score").innerHTML = nikod;
+      document.querySelector("#id_name").innerHTML = shem;
+    }
+
+    function add5Score(){
+      console.log("click 222")
+      nikod += 5;
+      document.querySelector("#id_score").innerHTML = nikod;
+    }
+
+    function reduce1Score(){
+      nikod--;
+      document.querySelector("#id_score").innerHTML = nikod;
+
+    }
+
+
+    // תחסירו ב 30 ואם הניקוד לקטן מ0 תציגו אלרט של גיים אובר
+  
+  </script>
+</head>
+<body>
+  <!-- שלוחצים על הוספה של 5 יוסיף 5 נקודות
+  ובכפתור חיסור יוריד 1 -->
+  <button onclick="add5Score()">Add 5 score</button>
+  <button onclick="reduce1Score()">Reduce 1 score</button>
+  <h2>Lives: <span id="id_lives"></span></h2>
+  <h2>Score: <span id="id_score"></span></h2>
+  <h2>Name: <span id="id_name"></span></h2>
+  <img src="images/crash.jpg" width="500" alt="crash">
+</body>
+</html>

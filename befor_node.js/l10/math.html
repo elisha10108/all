@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="util_js/numbers.js"></script>
+  <script>
+    window.onload = function() {
+
+    }
+
+    function runRollute(){
+      //document.querySelector("#id_h2").innerHTML += returnRoulleteNumber() + ",";
+      document.querySelector("#id_h2").innerHTML += randomNum(2,12) + ",";
+    }
+
+    function returnRoulleteNumber(){
+      let rnd = Math.random() * 33;
+      // rnd= Math.round(rnd); // מעגל כלפי מעלה אם המספר הוא עם שבר של חצי ומעלה ולמטה שזה לא
+      rnd = Math.floor(rnd);;
+      return rnd;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2 id="id_h2">-</h2>
+    <button onclick="runRollute()">Roll roullte</button>
+  </div>
+</body>
+</html>

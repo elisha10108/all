@@ -1,0 +1,57 @@
+header{
+  background: white;
+}
+
+nav{
+  min-height: 100px;
+}
+
+nav a{
+  padding:0 24px;
+  font-size: 1.2em;
+  color:grey;
+}
+
+.strip{
+  min-height: 300px;
+  background-image: url(images/cover.jpg);
+  background-position: center;
+}
+
+.about{
+  min-height: 700px;
+}
+
+.team{
+  
+  background: #ddd;
+}
+
+.team img{
+  border:4px solid white;
+}
+
+
+@media screen and (max-width:768px){
+  header{
+    position: relative;
+  }
+
+  /* מכין את התפריט איך יראה שיפתח מהמבורגר */
+  nav{
+    /* לא נרצה שבהתחלה הוא יופיע */
+    display: none;
+    position: absolute;
+    background: white;
+    top:70px;
+    right:0;
+    width:50%;
+    text-align: center;
+  }
+
+  nav a{
+    display: block;
+    padding:16px 0;
+    border-bottom: 1px solid grey;
+  }
+}

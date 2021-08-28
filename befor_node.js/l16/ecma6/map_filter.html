@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let persons_ar = [
+      { first: "koko", last: "akof", age: 40 },
+      { first: "Moshe", last: "Ofnik", age: 30 },
+      { first: "Optimus", last: "Prime", age: 9999 },
+    ]
+
+    // let fullNames_ar = []
+    window.onload = () => {
+      // map -> יכול לשמש כמו פור איץ
+      // persons_ar.forEach(item => {
+      persons_ar.map(item => {
+        console.log(item);
+      })
+
+      let fullNames_ar = persons_ar.map(item => item.first + " " + item.last)
+
+      // fullNames_ar = persons_ar.map(item => {
+      //   return item.first + " " + item.last;
+      // })
+
+      console.log(fullNames_ar);
+
+    }
+
+
+
+    // filter;
+    let prods_ar = [
+      { name: "apple", price: 5 },
+      { name: "banana", price: 10 },
+      { name: "mango", price: 8 },
+    ]
+
+    let expinsive_ar = prods_ar.filter(item => {
+      return (item.price > 7)
+      // if(item.price > 7){
+      //   return true;
+      // }
+      // else{
+      //   return false;
+      // }
+    })
+    // 13:08 להיות כאן
+    let low_ar = prods_ar.filter(item => (item.price < 9))
+
+    console.log(low_ar) // מוצרים מתחת ל 9 שקל
+    console.log(expinsive_ar); // מוצרים מעל 7 שקל
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

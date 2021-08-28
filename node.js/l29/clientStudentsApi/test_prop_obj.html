@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // תחשוב שאספת את המילה פרייס מהיו אר למעלה
+    let carPrice = "price"
+    let carKm = "km"
+    let carYearProp = 2018;
+
+    // key:value
+    let obj = {
+      model:"mazda 2",
+      color:"red",
+      year:carYearProp,
+      // [ סוגריים מרובעים מייצגים שרוצים לדבר עם המילה בתוך המשתנה
+    // ולא לרשום את המשתנה עצמו]
+      [carPrice]:20000,
+      [carKm]:50000
+    }
+
+    // [carPrice] -> המיר את עצמו לערך שלו בפנים ובעצם כתב
+    // price: ....
+    console.log(obj.price);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

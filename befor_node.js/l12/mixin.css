@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+  background: yellow;
+  margin: 0;
+}
+
+.container {
+  background: grey;
+  border: 2px solid green;
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+  padding: 16px;
+}
+/*# sourceMappingURL=mixin.css.map */

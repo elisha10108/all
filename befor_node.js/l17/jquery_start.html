@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- JQUERY תמיד יהיה מחובר ראשון לפני כל הקבצים שלנו -->
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    // window.onload =() => {}
+    // $ -> jquery
+    $(document).ready(() => {
+      init();
+    })
+
+    const init = () => {
+      // alert("jquery!");
+      // document.querySelector("h1").innerHTML = "JQUERY RULE!";
+      $("h1").html("Jquery rule!");
+      // let p_ar = document.querySelectorAll(".container > p");
+      // $(".container > p").html("הפיסקה עובדת על כולם")
+      // document.querySelector("h3").style.color = 'red';
+      $("h3").css("color","orange");
+      //document.querySelector("id_img").src = "images/pic3.jpg"
+      $("#id_img").attr("src","images/pic3.jpg");
+
+      //document.querySelector("h3").innerHTML += " koko"
+      $("h3").append(" koko"); // כשרוצים להוסיף
+// יצבע את כל הפסקאות שמופיע בתוכם המילה ביידן
+      //document.querySelector("p:contains(biden)").style.color = "red";
+      $("p:contains(biden)").css("background","greenyellow");
+// ניתן להשפיע על מספר מאפיינים על ידי יצירת אובייקט של סי אס אס
+      let cssObj = {
+        border:"4px solid green",
+        background:"black",
+        color:"white",
+        padding:"12px"
+      }
+      $("#para3").css(cssObj);
+    }
+  </script> 
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to JQUERY!</h1>
+    <h2>title 2 a</h2>
+    <h3 class="title3">title 3 b</h3>
+    <img id="id_img" src="images/pic2.jpg" alt="worker">
+    <p>para 1</p>
+    <p>para 2</p>
+    <p id="para3">para 3</p>
+    <p>para 4 biden</p>
+    <p>para 5 koko</p>
+    <p>para 6</p>
+    <p>para 7 biden</p>
+    <section>
+      <h2>Title 2 in section</h2>
+      <p>para 1 a</p>
+      <p>para 2 a</p>
+      <p>para 3 a</p>
+      <p>para 4 a</p>
+    </section>
+  </div>
+</body>
+</html>

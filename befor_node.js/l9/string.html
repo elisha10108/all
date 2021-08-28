@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script>
+    let user = "jack";
+    
+    window.onload = init;
+
+      
+    function init(){
+      document.querySelector("#id_h1").innerHTML += " World";
+      document.querySelector("#id_h2a").innerHTML = "Welcome " + user + " to our site - old";
+      document.querySelector("#id_h2b").innerHTML = `Welcome <span class="text-danger">${user}</span> to our site - new`;
+    }
+  </script>
+</head>
+<body>
+  <h1 id="id_h1">Hello</h1>
+  <h1 id="id_h2a"></h1>
+  <h1 id="id_h2b"></h1>
+</body>
+</html>

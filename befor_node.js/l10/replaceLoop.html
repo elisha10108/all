@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    let st = "the sheep jump over the stupid sheep and go to the black sheep";
+
+    window.onload = function(){
+      let rep = st;
+      while(rep.indexOf("sheep") > -1){
+        rep = rep.replace("sheep","cow");
+      }
+      document.body.innerHTML = rep;
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

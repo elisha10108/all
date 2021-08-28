@@ -1,0 +1,77 @@
+// $_bg -> נקרא דיפולט פרמטרס מה שיתן לפרמטרים אם לא נעביר ארגיומנט
+@mixin boxStyle($_w,$_h,$_bg:white,$_fontColor:black) {
+  width:$_w;
+  min-height: $_h;
+  background: $_bg;
+  color:$_fontColor;
+}
+
+header{
+  // בשביל שיהיה סטיקי ותמיד ישאר במסך
+  position: fixed;
+  width:100%;
+  top: 0;
+  left:0;
+  z-index: 999;
+  .inside_header{
+    @include boxStyle(100%, 100px , grey,black );
+    border:4px solid black;
+  }
+}
+
+main{
+  // תמיד ניתן מארג'ין טופ אם יש תגית שהיא במצב פיקסד
+  // והמרג'ין טופ יהיה בערך של הגובה 
+  // של התגית הידר
+  margin-top: 100px;
+  @include boxStyle(100%, 100px );
+  nav{
+    // auto - אם יש לו רוחב כבר שניתן  על ידי קלאס אחר עדיף לרשום אוטו
+    @include boxStyle(auto,1300px,pink,black);
+  }
+
+  article{
+    .box1{
+      min-height: 130px;
+      margin-bottom: 8px;
+      
+      .box_a{
+        @include boxStyle(auto,130px,grey);
+      }
+
+      .box_b{
+        @include boxStyle(auto,130px,red);
+      }
+
+      .box_c{
+        @include boxStyle(auto,130px,silver);
+      }
+      
+    }
+    .box2{
+      @include boxStyle(100%, 130px, skyblue, black );
+      margin-bottom: 8px;
+    }
+    .box3{
+      @include boxStyle(100%, 130px, orange, black )
+    }
+  }
+}
+
+footer{
+  // בשביל שיהיה סטיקי ותמיד ישאר במסך
+  position: fixed;
+  width:100%;
+  // נתנו בוטום כדי שנדבר איתו מהקצה התחתון
+  bottom: 0;
+  left:0;
+  
+
+  .footer_inside{
+    max-width:1140px;
+    margin:0 auto;
+    @include boxStyle(auto, 100px,black ,white )
+  }
+}
+
+// 10:55

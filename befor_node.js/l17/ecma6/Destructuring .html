@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let car1  = {
+      color:"red",
+      model:"mazda 5",
+      price:"60K"
+    }
+
+    // מפרק את המאפיינים של האובייקט למשתנים וככה יש יותר סדר בעין
+     // let model = car1.model;
+    // let color = car1.color;
+    let {color,model} = car1;
+    console.log(model);
+
+    let fruits_ar = ["apple","banana","kiwi"]
+
+    let [A,B,C] = fruits_ar;
+
+    console.log(C);
+
+
+    // const renderCar = (item) => {
+    //   document.body.innerHTML += `<h2 style="color:${item.color}">${item.model} - ${item.price}</h2>`
+    // }
+// destuction to Paramters
+    const renderCar = ({color,model,price}) => {
+      document.body.innerHTML += `<h2 style="color:${color}">${model} - ${price}</h2>`
+    }
+
+    window.onload = () => {
+      renderCar(car1);
+    }
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

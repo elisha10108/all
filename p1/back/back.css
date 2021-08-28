@@ -1,0 +1,44 @@
+ *{
+   box-sizing: border-box;
+ }
+ body{
+    background: linear-gradient(45deg, rgb(86, 75, 238) 0%, rgb(105, 232, 241) 50%, rgba(242,242,242,1) 100%);
+    margin: 0 80px 0 80px ;
+}
+
+main{
+    border: 12px solid #e2aad9;
+    background: rgb(52, 228, 190);
+    text-align: center;   
+    padding: 1em;
+  }
+main h1{
+  font-size: 3em;
+  font-family:'Pattaya', sans-serif;
+
+  }
+  main hr{
+  background-color: #f85c40;
+  height: 3px;
+  width: 70%;
+  }
+  main p{
+  font-size: 1em;
+  columns: 2;
+  }
+  @media screen and (max-width:768px){
+    body{
+      max-width:300px ;
+    }
+    main h1{
+      font-size: 2em;
+    
+      }
+      main img{
+        min-width:112% ;
+      }
+      main p{
+        font-size: 1em;
+        columns: 1;
+        }
+  }

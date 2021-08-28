@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      viewEvents();
+      init();
+    })
+
+    const init = () => {
+      $("button").each(function(){
+        let borderClr = $(this).data("border");
+        $(this).css("border","4px solid "+borderClr);
+      })
+    }
+
+    const viewEvents = () => {
+      //.addEventListener -> on
+      $("button").on("click",function(){
+        let getDataColor = $(this).data("color");
+        $(this).css("background",getDataColor);
+      })
+    }
+  </script>
+</head>
+<body>
+  <button data-color="red" data-border="orange">click me 1</button>
+  <button data-color="blue" data-border="navy">click me 2</button>
+  <button data-color="gold" data-border="yellow">click me 3</button>
+  
+</body>
+</html>

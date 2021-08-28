@@ -1,0 +1,7 @@
+ב JQUERY
+,find,
+children 
+
+ב CSS לבדוק את הסלקטורים:
+:active
+:focus

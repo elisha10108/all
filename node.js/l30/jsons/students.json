@@ -1,0 +1,17 @@
+[
+  {
+    "name":"koko",
+    "score":60,
+    "subject":"html"
+  },
+  {
+    "name":"koko",
+    "score":40,
+    "subject":"javascript"
+  },
+  {
+    "name":"moshe",
+    "score":70,
+    "subject":"javascript"
+  }
+]

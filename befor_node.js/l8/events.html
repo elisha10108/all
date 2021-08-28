@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function init() {
+      changeImgWidth();
+    }
+
+    function changeToMoshe() {
+      document.querySelector("#id_img").src = "images/pic2.jpg";
+    }
+
+    function changeToKoko() {
+      document.querySelector("#id_img").src = "images/pic1.jpg";
+    }
+
+    function changeToJack() {
+      // set                                =   get
+      document.querySelector("#id_img").src = "images/pic3.jpg";
+    }
+
+    function changeImgWidth() {
+      
+      document.querySelector("#id_img").width = document.querySelector("#id_input").value;
+    }
+  </script>
+</head>
+
+<body onload="init()">
+  <h2>Enter img width:</h2>
+  <!-- value - הברירת מחדל שיהיה רשום בתוך האינפוט -->
+  <input id="id_input" value="200" type="number" oninput="changeImgWidth()">
+  <br>
+  <img id="id_img"  src="images/pic1.jpg" alt="worker">
+  <br>
+  <button onclick="changeToKoko()">koko 1</button>
+  <button onclick="changeToMoshe()">moshe 2</button>
+  <button onclick="changeToJack()">jack 3</button>
+</body>
+
+</html>

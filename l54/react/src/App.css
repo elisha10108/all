@@ -1,0 +1,17 @@
+.admin_nav_side{
+  background:black;
+  color:white;
+}
+
+.admin_nav_side a {
+  color:white;
+  text-decoration: none;
+  padding:16px;
+  border-bottom:2px solid white;
+}
+
+.admin_nav_side a:hover {
+  background:#444;
+}
+
+/* 10:50 */

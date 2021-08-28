@@ -1,0 +1,27 @@
+/* כל סלייד
+יהיה עם רקע של תמונה אחרת */
+
+.carousel-inner{
+  min-height: 300px;
+}
+
+.carousel-inner .carousel-item{
+  /* background-image: url(images/city1.jpeg); */
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  color:orange;
+  text-align: center;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+
+.carousel-inner .carousel-item > div{
+  display: flex;
+  /* יורש את הגובה מהאבא */
+  min-height: inherit;
+  justify-content: center;
+  align-items: center;
+}

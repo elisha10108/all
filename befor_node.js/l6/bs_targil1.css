@@ -1,0 +1,51 @@
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+nav{
+  min-height: 40px;
+  background: black;
+  /* color:white; */
+}
+
+nav a{
+  color:white;
+  padding:0 12px;
+  border-right: 1px solid white;
+}
+
+nav a:last-of-type{
+  border-right:none;
+}
+
+header{
+  min-height: 150px;
+  background: skyblue;
+  color:blue;
+}
+
+main{
+  min-height: 150px;
+  background: black;
+  color:white;
+}
+
+main .box_top{
+  min-height: 150px;
+  border:1px solid white;
+}
+
+main .box_bottom{
+  min-height: 100px;
+  border:1px solid white;
+}
+
+footer{
+  min-height: 40px;
+  background: grey;
+  color:white;
+}

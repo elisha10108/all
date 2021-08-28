@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = () => {
+      initPromise();
+    }
+// 13:15 
+    const initPromise = () => {
+      checkEmail("oferwalla.com")
+        .then(_message => {
+          document.querySelector("#id_h2").innerHTML = "staus 200 success: " + _message;
+          document.querySelector("#id_h2").style.color = "green";
+        })
+        .catch(_message => {
+          document.querySelector("#id_h2").innerHTML = "Error: " + _message;
+          document.querySelector("#id_h2").style.color = "red";
+        })
+    }
+
+
+    const checkEmail = (_email) => {
+      return new Promise((resolve, reject) => {
+        if (_email.length < 4) {
+          reject("email too short");
+        }
+        else if (!_email.includes("@") || !_email.includes(".")) {
+          reject("Invalid email");
+        }
+        else {
+          resolve("Email is ok");
+        }
+      })
+    }
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

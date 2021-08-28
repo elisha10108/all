@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = () => {
+      init();
+    }
+
+    const init = () => {
+      howPromiseWork()
+      .then(data => {
+        console.log(data);
+        return new Promise((resolve,reject) => {
+          resolve("samsung and apple from coutnry:"+data)
+        })
+      })
+      .then(data => {
+        console.log(data);
+        return new Promise((resolve,reject) => {
+         resolve("end , galaxy s10 and iphone of - "+data)
+        })
+      })
+      .then(data => {
+        console.log(data);
+      })
+      .catch(err => {
+        // catch -> יתפוס את השגיאה לא משנה של איזה פרומיס
+      })
+    }
+
+    const howPromiseWork = () => {
+      return new Promise((resolve,reject) => {
+        // מביא את המדינה של יוזר
+        resolve("israel")
+      })
+    }
+     
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

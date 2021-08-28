@@ -1,0 +1,176 @@
+[{
+  "_id": {
+    "$oid": "60112cec81a72f3df4b5e45e"
+  },
+  "name": "koko",
+  "score": 60,
+  "subject": "html"
+},{
+  "_id": {
+    "$oid": "60112cec81a72f3df4b5e45f"
+  },
+  "name": "koko",
+  "score": 40,
+  "subject": "javascript"
+},{
+  "_id": {
+    "$oid": "60112cec81a72f3df4b5e460"
+  },
+  "name": "moshe",
+  "score": 70,
+  "subject": "javascript"
+},{
+  "_id": {
+    "$oid": "601133877badf040b026e85b"
+  },
+  "date_created": {
+    "$date": "2021-01-27T09:32:02.832Z"
+  },
+  "name": "biden",
+  "score": 90,
+  "subject": "html",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601134bd3ea7c80db4193a02"
+  },
+  "date_created": {
+    "$date": "2021-01-27T09:39:01.119Z"
+  },
+  "name": "master bin",
+  "score": 60,
+  "subject": "javascript",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6011511acae3fe31bc17fabf"
+  },
+  "date_created": {
+    "$date": "2021-01-27T11:36:06.881Z"
+  },
+  "name": "jojo",
+  "score": 30,
+  "subject": "javascript",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6011512bcae3fe31bc17fac0"
+  },
+  "date_created": {
+    "$date": "2021-01-27T11:36:06.881Z"
+  },
+  "name": "elisha",
+  "score": 80,
+  "subject": "javascript",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6011513acae3fe31bc17fac1"
+  },
+  "date_created": {
+    "$date": "2021-01-27T11:36:06.881Z"
+  },
+  "name": "kyle",
+  "score": 70,
+  "subject": "javascript",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60115142cae3fe31bc17fac2"
+  },
+  "date_created": {
+    "$date": "2021-01-27T11:36:06.881Z"
+  },
+  "name": "cartman",
+  "score": 50,
+  "subject": "javascript",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60115157cae3fe31bc17fac3"
+  },
+  "date_created": {
+    "$date": "2021-01-27T11:36:06.881Z"
+  },
+  "name": "cartman dad",
+  "score": 50,
+  "subject": "javascript",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60115161cae3fe31bc17fac4"
+  },
+  "date_created": {
+    "$date": "2021-01-27T11:36:06.881Z"
+  },
+  "name": "kyle dad",
+  "score": 80,
+  "subject": "javascript",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60115169cae3fe31bc17fac5"
+  },
+  "date_created": {
+    "$date": "2021-01-27T11:36:06.881Z"
+  },
+  "name": "kenny",
+  "score": 10,
+  "subject": "javascript",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6011517bcae3fe31bc17fac6"
+  },
+  "date_created": {
+    "$date": "2021-01-27T11:36:06.881Z"
+  },
+  "name": "stan",
+  "score": 90,
+  "subject": "javascript",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60115181cae3fe31bc17fac7"
+  },
+  "date_created": {
+    "$date": "2021-01-27T11:36:06.881Z"
+  },
+  "name": "randy",
+  "score": 100,
+  "subject": "javascript",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6011518fcae3fe31bc17fac8"
+  },
+  "date_created": {
+    "$date": "2021-01-27T11:36:06.881Z"
+  },
+  "name": "sponge bob",
+  "score": 100,
+  "subject": "javascript",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6011519ccae3fe31bc17fac9"
+  },
+  "date_created": {
+    "$date": "2021-01-27T11:36:06.881Z"
+  },
+  "name": "petrick",
+  "score": 50,
+  "subject": "javascript",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601151abcae3fe31bc17faca"
+  },
+  "date_created": {
+    "$date": "2021-01-27T11:36:06.881Z"
+  },
+  "name": "crab",
+  "score": 80,
+  "subject": "javascript",
+  "__v": 0
+}]

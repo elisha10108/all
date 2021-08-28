@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let def_ar = ["d","e","f"];
+    //let abc_ar = ["a","b","c","d","e","f"];
+    let abc_ar = ["a","b","c",...def_ar]; 
+
+    let car1 = {name:"ferrari",year:2020,price:"3m",color:"red" };
+    // המאפיין האחרון קובע במקרה הזה הצבע דורס את המאפיין צבע שהגיע מקאר 1
+    let car2 = {...car1,color:"yellow"};
+  //  car2.color = "yellow";
+
+    console.log(abc_ar);
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

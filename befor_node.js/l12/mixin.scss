@@ -1,0 +1,25 @@
+// הגדרת פונקציה
+@mixin bodyProps($font,$bg) {
+  font-family: $font;
+  background: $bg;
+  margin: 0;
+}
+
+@mixin cont($bg,$borderColor,$width,$fontColor,$padding) {
+  background: $bg;
+  border:2px solid $borderColor;
+  max-width: $width;
+  margin:0 auto;
+  color:$fontColor;
+  padding: $padding;
+}
+ 
+
+body{
+  // include -> קריאה לפונקציה וקבלת ארגיומנט/פרמטרים
+  @include bodyProps(sans-serif, yellow );
+}
+
+.container{
+  @include cont(grey,green,800px,white,16px);
+}

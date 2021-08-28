@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let numbers_ar = []
+    let timer ;
+    let counter;
+
+    window.onload = function(){
+      init()
+    }
+
+    function init(){
+      resetNumbersArray();
+        //showNumbers();
+        timer = setInterval(showBall,1000);
+    }
+
+    function resetNumbersArray(){
+      counter = 0;
+      for(let i = 0 ; i < 20 ; i++){
+        numbers_ar[i] = i + 1;
+      }
+      console.log(numbers_ar);
+    }
+
+
+    function showBall(){
+      let rnd = randomNum(0,numbers_ar.length-1);
+        document.querySelector("#id_h2").innerHTML += numbers_ar[rnd]+",";
+        // מוציא את המספר מהמערך
+        numbers_ar.splice(rnd,1);
+        counter++;
+        if(counter == 6){
+          clearInterval(timer);
+        }
+    }
+
+    function showNumbers(){
+      for(let i = 0 ; i < 6 ; i++){
+        let rnd = randomNum(0,numbers_ar.length-1);
+        document.querySelector("#id_h2").innerHTML += numbers_ar[rnd]+",";
+        // מוציא את המספר מהמערך
+        numbers_ar.splice(rnd,1);
+        console.log(numbers_ar);
+      }
+    }
+
+
+
+
+function randomNum(_min,_max){
+  let rnd = Math.random() * ((_max-_min) + 1);
+  rnd = Math.floor(rnd) ; // 0 - 90;
+  rnd += _min // 10 - 100;
+  return rnd;
+}
+
+  </script>
+</head>
+<body>
+  <h2 id="id_h2"></h2>
+</body>
+</html>

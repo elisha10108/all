@@ -1,0 +1,56 @@
+*{
+  /* אומר לבורדר ולפדינג להתנפח כלפי פנים */
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  background: silver;
+  font-family: sans-serif;
+}
+
+.container{
+  width:700px;
+  background: white;
+  margin:0 auto;
+  /* padding:8px; */
+}
+
+header{
+  min-height: 70px;
+  background: cornflowerblue;
+  width:100%;
+  padding:8px;
+  margin-bottom: 8px;
+}
+
+.row{
+  min-height: 300px;
+  width:100%;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row .box1{
+  width:25%;
+  background: darkcyan;
+  color:white;
+  padding:8px;
+}
+
+.row .box2{
+  width:48%;
+  background: darkcyan;
+  color:white;
+  padding:8px;
+}
+
+
+footer{
+  min-height: 50px;
+  background: cornflowerblue;
+  width:100%;
+  padding:8px;
+  
+}

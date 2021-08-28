@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = function(){
+
+    }
+
+    function showTranslate(e){
+      let language= document.querySelector("#id_select").value
+      let translate = e.target.dataset[language];
+      document.querySelector("#id_h1").innerHTML = translate;
+
+      // אם להפוך את המלל בכפתור למה שכתוב
+      // e.target.innerHTML = translate;
+    }
+  </script>
+</head>
+<body>
+  <h1 id="id_h1"></h1>
+  <button data-he="כלב" data-gr="kelev" onclick="showTranslate(event)">Dog</button>
+  <br>
+  <button data-he="חתול" data-gr="hatol" onclick="showTranslate(event)">Cat</button>
+  <br>
+  <button data-he="עכבר" data-gr="ahbar" onclick="showTranslate(event)">Mouse</button>
+  <br>
+  <button data-he="אריה" data-gr="aria" onclick="showTranslate(event)">Lion</button>
+  <br>
+  <button data-he="אריה" data-gr="aria"  onclick="showTranslate(event)">Lion</button>
+  <br>
+  <select id="id_select">
+    <option value="he">he</option>
+    <option value="gr">gr</option>
+  </select>
+  <!-- כאשר לוחצים על אחד מהכפתורים יוצג
+  התרגום שלהם באייץ 1 -->
+</body>
+</html>

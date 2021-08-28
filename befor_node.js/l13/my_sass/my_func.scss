@@ -1,0 +1,6 @@
+@mixin allContainer($_marg,$_width,$_bg,$_pad) {
+  margin: $_marg;
+  max-width: $_width;
+  background: $_bg;
+  padding:$_pad;
+}

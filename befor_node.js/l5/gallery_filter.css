@@ -1,0 +1,44 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:12px;
+  font-family: sans-serif;
+  background: silver;
+}
+
+
+.container{
+  max-width:700px;
+  margin:0 auto;
+  background: white;
+  padding:16px;
+  /* בדיוק הגובה של החלון */
+  min-height: 100vh;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.row img{
+  width:48%;
+  border:2px solid white;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  margin-bottom: 32px;
+  transition: 1s;
+  filter: grayscale(100%) blur(3px);
+  /* z-index: 999; */
+}
+
+.row img:hover{
+  transform: scale(1.3,1.3) rotate(9deg);
+  filter: grayscale(0%) blur(0px);
+  /* העומק של התגית ביחס לאחים שלו
+  בברירת מחדל כולם 0 ולכן מספר גבוה
+  ישים ואתם מקדימה */
+  z-index: 999;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // לא ניתן לתת לפקודות שנקראות ישירות מאירוע את ה
+    // ASYNC 
+    // ולכן במקרה שלנו תמיד אמרתי לכם לקרוא לפונקציה איניט
+    // שאותה אפשר להכריז כאסיכרונית
+    window.onload = () => {
+      init();
+      console.log("after init 3");
+    }
+
+
+    // async await -> בא להחליף את שיטת הטן וככה הכתיבה קצת יותר זורמת ומובנת
+
+    // async -> הופך את הפונקציה לאסיכרונית אך בתוכה היא מבצעת את הפקודות בסדר סינכרוני
+    const init = async () => {
+      console.log("first init 1")
+      let myUrl = "http://fs1.co.il/bus/bitcoin.php";
+      // await -> לא ימשיך לשורה הבאה עד שקיבל את כל המידע
+      try {
+        let resp = await fetch(myUrl);
+        let data = await resp.json();
+        console.log(data);
+      }
+      //  מספיק שבטריי יש איזה טעות באחת מהשורות בבלוק ישר יקפוץ לקץ' ויציג את הבעיה בקונסול
+      catch (err) {
+        console.log(err)
+      }
+
+      console.log("end init 2")
+    }
+
+    // const initOld = () => {
+    //   let myUrl = "http://fs1.co.il/bus/bitcoin.php";
+    //   fetch(myUrl)
+    //     .then(resp => resp.json())
+    //     .then(data => {
+    //       console.log(data);
+    //     })
+    //     .catch(err => {
+    //       console.log(err)
+    //     })
+    // }
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

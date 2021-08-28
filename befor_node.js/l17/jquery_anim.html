@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      init();
+    })
+
+    const init = () =>{  viewEvents();  }
+
+    const viewEvents = () => {
+      $("#hide_btn").on("click",() => {
+        // מסתיר ואם שמים מספר מבצע באנימציה לפי הזמן שכתבנו במילי סקנדס
+        $(".box").hide(800);
+        // $(".box").slideUp(800);
+        // $(".box").fadeOut(800);
+
+      })
+      // מציג ואם שמים מספר מבצע באנימציה לפי הזמן שכתבנו במילי סקנדס
+      $("#show_btn").on("click",() => {
+        $(".box").show(800);
+        // $(".box").slideDown(800);
+        // $(".box").fadeIn(800);
+      })
+      // מסתיר/מציג לפי המצב הנוכחי שלו (עושה ההפך) ואם שמים מספר מבצע באנימציה לפי הזמן שכתבנו במילי סקנדס
+      $("#toggle_btn").on("click",() => {
+        //$(".box").toggle(800);
+        // $(".box").slideToggle(800);
+        $(".box").fadeToggle(800);
+      })
+
+      $("#toggleClass_btn").on("click", () => {
+        // מוסיף / מוחק קלאס מהאלמנט בוקס
+        $(".box").toggleClass("box_out")
+      })
+    }
+    // 14:54
+  </script> 
+  <style>
+    .box{
+      width:200px;
+      height: 200px;
+      background: orange;
+      transform: translate(0,0);
+      transition: 1500ms;
+    }
+
+    .box_out{
+      transform: translate(-150%,0);
+    }
+  </style>
+</head>
+<body class="bg-dark">
+  <div class="container bg-white p-3">
+    <div class="box">
+      this is box
+    </div>
+    <button id="hide_btn">hide</button>
+    <button id="show_btn">show</button>
+    <button id="toggle_btn">toggle</button>
+    <button id="toggleClass_btn">toggle class</button>
+  </div>
+</body>
+</html>

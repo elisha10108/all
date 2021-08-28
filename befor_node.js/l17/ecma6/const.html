@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    const START_LIVES = 5;
+// אם אובייקט מיוחד אז ניתן להוסיף ,לערוך ולמחוק תאים מהמערך / מאפיינים אובייקט
+    const prices_ar = ["a","b","c","d"];
+    let local_ar = ["b","c","f"];
+    // לא ניתן להשוות ישר מערך למערך חדש עם תאים של מערך קודם מכיוון שהוא קונסט/קבוע
+    //prices_ar = [...local_ar];
+    // אז על מנת לבצע את הפעול שלהכניס מידע חדש למערך אנחנו קודם נאפס אותו
+    prices_ar.splice(0,prices_ar.length);
+    // ואז לדחוף את כל התאים של המערך האחר לתוכו
+    // prices_ar.push("b","c","f");
+    prices_ar.push(...local_ar);
+    
+    //prices_ar.push("e");
+
+    console.log(prices_ar);
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

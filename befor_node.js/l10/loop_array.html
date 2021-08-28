@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let pics_ar = ["flag3.jpg","pic5.jpg","pic4.jpg","flag2.jpg","flag1.jpg"];
+
+    window.onload = function(){
+      resetApp();
+    }
+
+    function resetApp(){
+      for(let i = 0 ; i < pics_ar.length ; i++){
+        // document.body.innerHTML += pics_ar[i]
+        document.body.innerHTML += `<img src="images/${pics_ar[i]}" width="150"/><br>`
+      }
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

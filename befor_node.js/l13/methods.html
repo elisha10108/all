@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let person1;
+    let person2;
+    let person3;
+
+    window.onload = function(){
+      createObjs();
+    }
+
+    function createObjs(){
+      person1 = {
+        // name, age , job -> נקרא פרופירטיס, פרופס , מאפיינים
+        name:"koko",
+        age:40,
+        job:"monkey",
+        // פונקציה בתוך אובייקט נקרא מיטודה
+        addToHtml: function(){
+          // document.body.innerHTML += `<h2>${person1.name} - ${person1.age}</h2>`
+          // this -> מתייחס לאובייקט שהמיטודה נמצאת בתוכו במקרה שלנו 
+          // PERSON1
+          document.body.innerHTML += `<h2>${this.name} - ${this.age}</h2>`
+        }
+      }
+
+      person2 = {
+        name:"moshe",
+        age:20,
+        job:"soldier",
+        addToHtml: addObjToHtml
+      }
+
+      person3 = {
+        name:"eli",
+        age:40,
+        job:"manager",
+        // 
+        addToHtml: addObjToHtml
+      }
+
+      person1.addToHtml();
+      person2.addToHtml();
+      person3.addToHtml();
+    }
+
+    function addObjToHtml(){
+      document.body.innerHTML += `<h2>${this.name} - ${this.age}</h2>`
+    }
+
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

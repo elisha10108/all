@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    function init(){
+      document.getElementById("id_h1").innerHTML = "JS RULE 2222!";
+      document.getElementById("id_h1").style.color = "orange";
+      document.querySelector("#id_h1").style.background = "blue";
+      // כדי להפעיל פונקציה נוספת חוץ מהאיניט בהתחלה קוראים לפונקציה
+      // מהאיניט, וחשובה להבין שניתן להפעיל פונקציות גם מפונקציה אחרת שיכולה לקרוא
+      // לה ולא רק דרך אירועים/איבנטים
+      changeImg();
+    }
+
+    function changeImg(){
+      document.querySelector("#id_img").src = "images/pic2.jpg";
+      document.querySelector("#id_img").width = 400;
+
+    }
+  </script>
+</head>
+<body onload="init()">
+  <h1 id="id_h1">Welcome back to JS</h1>
+  <img id="id_img" src="images/pic1.jpg" alt="koko" >
+</body>
+</html>

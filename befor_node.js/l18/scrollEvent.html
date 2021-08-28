@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    $(() => {
+      viewEvents();
+      $("#id_like_box").hide()
+    })
+
+    const viewEvents = () => {
+// מדבר עם לינקים שיש להם קלאס סקרול2 כדי לא לחסום לינקים ששולחים נניח לדף אחר
+      $("a.scroll2").on('click', function (event) {
+        event.preventDefault();
+        // פקודת אנימציה של ג'ייקוארי ובמקרה הזה מבצע אנימצי על החלון במיקום שהוא מציג את המסמך
+        $('html, body').animate({
+          // הנקודה העליונה של האלמנט שיש בו איי די ששיגרנו אליו
+          scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+      });
+// 15:02 להיות כאן
+
+      $(window).on("scroll", () => {
+        // לבדוק שהמשתמש הגיע לסוף העמוד
+        // ציר הוואי של החלון כמה גללנו ביחס לחלק הכי עליון של ההמסמך
+        let windowTop = $(window).scrollTop();
+        // להבין מה הגובה של המסמך שלי
+        let documentHeight = $(document).height();
+        // להבין מה הגובה של החלון
+        let windowHeight = $(window).height();
+        console.log("wTop", windowTop);
+        console.log("dHeight", documentHeight);
+        console.log("wHeight", windowHeight)
+
+        // כדי להבין שהגענו לסוף אנחנו צריכים לעשות חישוב של 
+        // windowTop+windowHeight >= documentHeight
+        if (windowTop + windowHeight >= documentHeight) {
+          // alert("end of screen do like !!!! ")
+          $("#id_like_box").fadeIn(800);
+        }
+      })
+    }
+  </script>
+</head>
+
+<body id="id_top" class="bg-dark">
+  <div class="container bg-white" style="min-height: 1200px;">
+    <h2>First div</h2>
+    <h3 id="id_h3">new line</h3>
+  </div>
+  <div class="container bg-success" style="min-height: 600px;">
+    <h2>second div</h2>
+    <a class="scroll2 text-warning"  href="#id_h3">back to top</a>
+    <div id="id_like_box" style="position: fixed; bottom:0; right:0; width:200px; height: 100px; background: hotpink;">Do like !!! its good for you</div>
+  </div>
+</body>
+
+</html>

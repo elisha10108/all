@@ -1,0 +1,53 @@
+
+h2{
+    font-family: 'pattaya';
+    text-align: center;
+    margin-top:60px  ;
+    color: aliceblue;
+  }
+  strong{
+    color: aliceblue;
+  }
+
+  p{
+    color: aliceblue ;
+  }
+  main hr {
+      height: 2px;
+     background: rgb(151, 202, 150);
+  }
+  main .limg{
+      width: 150px;
+      height: 150px;
+  }
+  #read_more{
+    font-family: 'pattaya';
+      border: 2px solid darkcyan;
+     background: greenyellow;
+      padding: 16px;
+      border-radius: 19px 19px 19px 19px;
+      margin-bottom: 8px;
+  
+  }
+
+  @media screen and (max-width:768px){
+    /* main{
+        max-width:60%;
+    } */
+  
+    .img{
+float: none;
+    }
+    h2{
+      font-weight: bold;
+      font-size:medium;
+        font-family: 'pattaya';
+    
+      }
+     
+     .read{
+  padding: 30px;
+  width: 150px;
+      }
+
+  }

@@ -1,0 +1,39 @@
+
+  body{
+    font-family: 'Roboto', sans-serif;
+  }
+
+ h1{
+    font-family: 'pattaya', sans-serif;
+    font-size: 4em;
+    text-align: center;
+    margin-bottom:32px;
+  }
+  hr{
+  background-color: #8CBF3F;
+  height: 2px;
+  width: 70%;
+  }
+  h2{
+  font-family: 'Henny Penny', sans-serif;
+  font-size: 3em;
+  margin-top: 120px;
+  margin-bottom: 40px;
+  }
+ .card-header{
+  padding: 20px;
+  margin-top: 12px;
+  background: linear-gradient(135deg, rgb(5, 243, 252) 75%, rgba(255,255,255,0.67) 0%, rgb(158, 230, 252) 100%);
+  }
+   span{
+  font-size: 1.5em;
+  }
+span:hover{
+  color: #ffe600;
+  text-shadow: 19px 5px 19px #0112ff;
+  }
+  @media screen and (max-width:768px){
+h1{
+  font-size: 2em;
+}
+  }

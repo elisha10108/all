@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // promise -> הרעיון זה כיביכול שאם ההבטחה תתממש יקרא משהו מסויים ואם לא יקרא משהו אחר
+    // למשל דוגמא כמו שנניח נבטיח לילד שאם הוא יסדר את החדר שלו אז הוא יקבל זמן משחק בפלייסטיישן
+    // ואם לא הוא ייענש בחומרה
+    // resolve => מחזיר מידע אסכירוני אם הפעולה התבצעה
+    // reject => מחזיר מידע אסיכרוני אם יש בעיה כלשהי וההבטחה/פרומיס לא בוצע
+    
+    window.onload = () => {
+      init();
+    }
+
+    const init = () => {
+      let cleanRoomPromise = new Promise((resolve,reject) => {
+        let cleanRoom = false;
+        if(cleanRoom){
+          // then יפעיל את 
+          resolve("go play ps5")
+        }
+      
+        else{
+          // יפעיל את הקטץ'
+          reject("go to clean the garden for 2 hours !!!!")
+        }
+      })
+
+      // then -> אם יש הצלחה והפרמטר יכיל את המידע ששלחנו בריסולב
+      // catch -> אם ההבטחה לא מומשה והפרמטר יכיל את המידע ששלחנו בריג'קט
+      cleanRoomPromise
+      .then(data => {  
+        console.log(data);  
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    }
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

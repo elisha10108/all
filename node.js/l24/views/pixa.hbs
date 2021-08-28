@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Welcome to pixa galley - {{title}}</h1>
+  <div class="row">
+    {{#each ar}}
+    <a href="{{pageURL}}" class="col-4" target="_blank" title="{{tags}}">
+      <img src="{{previewURL}}" class="w-100"  alt="{{tags}}">
+    </a>
+    {{/each}}
+  </div>
+</div>

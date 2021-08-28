@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = function(){
+      // אם מזהה בלוקאל את הקיי מיי יוזר ידפיס אותו במקום הגיסט
+      // 3 אופציות לאיסוף מידע
+      // if(localStorage.getItem("myUser"))
+      // if(localStorage.myUser)
+      if(localStorage["myUser"]){
+        document.querySelector("#id_span").innerHTML = localStorage["myUser"];
+      }
+    }
+
+    function logInClicked(){
+      let userInput = document.querySelector("#id_input").value;
+      // שומר מידע בתוך הזכרון של הדפדפן ל 30 יום 
+      // המיי יוזר זה השם של הקיי/מפתח/משתנה והיוזר אינפוט זה המידע שנרצה לשמור בתוך הקיי
+      //קיי = KEY
+      localStorage.setItem("myUser", userInput);
+      document.querySelector("#id_span").innerHTML = localStorage["myUser"];
+    }
+
+    function logOutClicked(){
+      // localStorage.clear() // מוחק את כל הקיים מהזכרון של הלוקאל של הדומיין
+      localStorage.removeItem("myUser") // מוחק את כל הקיים מהזכרון של הלוקאל של הדומיין
+      document.querySelector("#id_span").innerHTML = "guest";
+    }
+  </script>
+</head>
+<body>
+  <h1>Welcome <span id="id_span">Guest</span> to our site</h1>
+  <h3>Enter your name:</h3>
+  <input id="id_input" type="text" >
+  <button onclick="logInClicked()">Log in</button>
+  <button onclick="logOutClicked()">Log out</button>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // אם הקונסט הוא פרימטיבי אז כותבים את כל השם של המשתנה/קונסט באותיות גדולות
+    const WORD  = "koko";
+
+    const car = {
+      name:"mazda",
+      color:"red",
+      km:90000
+    }
+
+    window.onload = () => {
+      // אם אני מנסה לשנות קבוע פרימטיבי נקבל שגיאה באותו רגע
+      // WORD = "jack";
+
+      // כאשר מדובר בקבוע שהוא אובייקט או מערך אז ניתן להוסיף לו תאים/מאפיינים חדשים 
+      // וגם לערוך או למחוק אותם
+      // אך הוא לא יתן לנו להשוות את הקונסט לאובייקט /מערך חדש לגמרי
+      //car = {name:"toyota",year:2010} // נקבל שגיאה
+      car.year = 2020; // יעבוד כי זה הוספת מאפיין
+      console.log(car);
+      
+      delete car.km; // מחיקת מאפיין
+
+      let abc_ar = ["a","b","d","e","f"];
+      // delete abc_ar[3];
+      // console.log(abc_ar);
+      console.log(car);
+    } 
+
+    // תמיד פונקציות יוכרזו כקונסט
+    const showName = (_obj) => {
+      console.log(obj.name);
+    }
+    
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

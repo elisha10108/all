@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = function(){
+      let st = "The fox jump over the lazy sheep and fox!";
+      document.querySelector("#id_h2").innerHTML = st+"<br>";
+      
+      let upperCase = st.toUpperCase(); // הופך את כל האותיות לקפיטל לגדולות
+      document.querySelector("#id_h2").innerHTML += `upperCase:${upperCase} <br>`;
+
+      let len = st.length; // מחזיר את מספר התווים של המחרוזת, גם רווח נחשב תו
+      document.querySelector("#id_h2").innerHTML += `length:${len} <br>`;
+      
+      let indexOfFox = st.indexOf("fox"); // אם ימצא את הצירוף בסטרינג יחזיר את מספר התו שהאות הראשונה
+      // של הצירוף מתחילה ממנו ואם לא יחזיר מינוס אחד
+      document.querySelector("#id_h2").innerHTML += `index of fox:${indexOfFox} <br>`;
+      
+      let repl = st.replace("fox","cow"); // מחליף את הפרמטר הראשון במחרוזת לפרמטר השני
+      document.querySelector("#id_h2").innerHTML += `replace :${repl} <br>`;
+      
+      let substr = st.substr(4,7); // יחתוך את הסטרינג מתו 4 וייקח 7 קדימה
+      document.querySelector("#id_h2").innerHTML += `substr :${substr} <br>`;
+
+      let substring = st.substring(4,7); // יחתוך את הסטרינג מתו 4 עד תו 7
+      document.querySelector("#id_h2").innerHTML += `substring :${substring} <br>`;
+
+      // להפוך סטרינג למערך 
+      // הפרמטר שבתוך הפונקציה זה התו שיחשב כתו הפרדה
+      let str_ar = st.split(" ");
+      console.log(str_ar);
+      
+      let fruits_ar = ["apple","banana","kiwi","mango"];
+      // הופך מערך לסטרינג , והפרמטר שיש בסוגריים זה התו שיפריד בסטרינג
+      // בין התאים
+      let str = fruits_ar.join("@@");
+      console.log(str);
+      // הסיבה להפוך מערך לסטרינג ולהפך זה על מנת לשמור מידע בדאטא בייס או לוקאל סטורג'
+      // כי הם המסדי נתונים יודעים לשמור רק סטרינגים או מספרים
+      
+    }
+  </script>
+</head>
+<body>
+  <h2 id="id_h2"></h2>
+</body>
+</html>

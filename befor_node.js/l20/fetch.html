@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = () => {
+      init();
+    }
+
+    const init = () => {
+      doApi();
+    }
+
+    const doApi = () => {
+      let myUrl = "http://fs1.co.il/bus/shop.php";
+      // like AJAX and XMLHTTPREQUEST of 2017
+      // פעולה מקבילה לאג'אקס של ג'ייקוארי ועושה בקשה אפי
+      fetch(myUrl)
+      // בטן הראשון רק מקבל את ההידר לראות מה הסטטוס של הבקשה
+      .then(resp => {
+        // לריספ יש מיטודה שנקראת ג'ייסון שמפרסרסת את המידע
+        // שהתקבל לג'ייסון ומחזירה אותו כפרומיס גם
+        return resp.json();
+      })
+      // כאן המידע הגיע אחרי שהוא מפורסר לג'ייסון
+      .then(data => {
+        console.log(data);
+      })
+      // כדי לתפוס שגיאה בבקשה
+      .catch(err => {
+        console.log(err);
+      })
+    }
+  </script>
+</head>
+<body>
+  <!-- נדפיס מאפי את השמות של המכשירים -->
+  <ul id="id_ul">
+
+  </ul>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let month_heb = ["aינואר","aפברואר","aמרץ"]
+
+    window.onload = function(){
+      showDate();
+    }
+
+    function showDate(){
+      // ברירת מחדל מתייחס לתאריך ולזמן של עכשיו 
+      //let dt = new Date();
+      // אך ניתן להכניס לו תאריך אחר
+      let dt = new Date("2021-01-01");
+      console.log(dt);
+      console.log(dt.getFullYear());
+      // מחזיר את מספר החודש אך מתחיל מ 0
+      console.log(dt.getMonth());
+      // מחזיר את מספר היום מ 0 ל 6
+      console.log(dt.getDay());
+      // זמן יוניקס - כמה זמן עבר במילישניות מ1970 1 1 00:00
+      console.log(dt.getTime());
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

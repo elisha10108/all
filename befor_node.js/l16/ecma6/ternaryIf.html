@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let temp = 25
+
+    window.onload = () => {
+      document.body.innerHTML += checkTemp();
+    }
+
+    const checkTemp = () => {
+      // TERnary if -> מלשון תנאי משולש
+          //   condition ?  true  :  false
+      return (temp > 28) ? "hot!" : "cold";
+      
+      // if(temp > 28){
+      //   return "hot!"
+      // }
+      // else{
+      //   return "cold";
+      // }
+    }
+  </script>
+</head>
+
+<body>
+  
+</body>
+</html>

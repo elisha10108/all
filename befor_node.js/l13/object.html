@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // שיטה ישנה
+    //let ar = new Array();
+    //let obj = new Object();
+   // let car1 = ["mazda 3","red",60000, 55000,2009,"yad2",1500]
+   // let car2 = ["toyota prius","blue",30000, 70000,2013,"yad2",1500]
+   // אובייקט ליטרלי
+    let car_obj1 = { 
+      name:"mazda 2",
+      color:"red",
+      year:2010,
+      price:"20K"
+     }
+
+     let car_obj2 = { 
+      name:"opel kadit",
+      color:"white",
+      year:1995,
+      price:"10K"
+     }
+
+     car_obj2.km = "90K";
+     //שינוי מאפיין
+     car_obj2.color = "gold";
+    //  car_obj2.color = "black";
+
+     // שיטה נוספת
+     let car_obj3 = {}
+     car_obj3.name = "BMW 3";
+     car_obj3.color = "Silver";
+     car_obj3.year = "2019";
+     car_obj3.price = "180K";
+
+    
+
+    window.onload = function(){
+      console.log(car_obj2.price);
+      console.log(car_obj2["year"]); // -> car_obj2.year // בג'אווה סקריפט אפשר לפנות לאובייקט גם כמערך אסוציאטיבי
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

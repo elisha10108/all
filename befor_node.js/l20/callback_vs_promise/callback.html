@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // callBack
+    // 1. 'פונקציה שפועלת מאירוע כגון לחיצה/קליק
+    // 2. פונקציה מפעילה פונקציה אחרת בדרך כלל בפעולות אסיכרוני
+    // 3. שיש טיימר והשהייה לפקודה שאנחנו רוצים לבצע עם סט אינטרבל או סט טיימר
+
+    window.onload = () => {
+      setTimeout(() => {
+        console.log("hello from callback of timer 3")
+      },1000)
+      console.log("bye of function");
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

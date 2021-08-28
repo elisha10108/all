@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      // alert("jquery work!")
+      $("h2").css("background", "red");
+      $("h2").html("jquery rule!");
+      viewEvents();
+      $("ol").append(`<li>Lemon cake</li>`);
+      $("ol").prepend(`<li>Chocolate cake</li>`);
+
+      // מוצא תגיות אל איי שמכילות בתוכם קיוי
+      $("ol li:contains(kiwi)").after("<li>Apple cake</li>");
+      $("ol li:contains(kiwi)").before("<li>Tot cake</li>");
+    })
+
+    const viewEvents = () => {
+      $("#pass_btn").on("click", () => {
+        // console.log("clicked")
+        if ($("#id_input").attr("type") != "text") {
+          // רטרן עוצר ישר את הפעולה וזה טוב אם יש אילס לוותר עליו
+         return $("#id_input").attr("type", "text");
+        }
+        // attr -> אטרביוט
+        // document.querySelector("#id_input").type = ""
+        $("#id_input").attr("type", "password");
+   
+        
+      })
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Welcome back to JQUERY!</h2>
+    <ol>
+      <li>Vanila cake</li>
+      <li id="id_kiwi">kiwi cake</li>
+      <li>orange cake</li>
+    </ol>
+    <input type="password" id="id_input" class="form-control">
+    <button id="pass_btn">show password</button>
+    <p>para 1</p>
+    <p>para 2</p>
+    <p>para 3</p>
+    <p>para 4</p>
+    <p>para 5</p>
+    <p>para 6</p>
+    <p>para 7</p>
+  </div>
+</body>
+
+</html>

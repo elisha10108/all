@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  <div class="row">
+    {{#each ar}}
+      <div class="col-lg-6 p-2 border">
+        <img src="{{image}}" alt="{{name}}" class="float-start me-2 w-25">
+        <h2>{{name}}</h2>
+        {{#if source}}
+        <div>Company: {{source}}</div>
+        {{else}}
+         <div class="text-danger">Company: unknown</div>
+        {{/if}}
+        {{!-- ייקח לעמוד עם הפרטים על אותו אדם בסינגל --}}
+        {{!-- @index -> יחזיר את האינדקס במערך של אותו אייטם
+        שהלולאה נמצאת עליו כרגע --}}
+        <a href="/vip/single/{{@index}}" class="btn btn-dark">More info</a>
+      </div>
+    {{/each}}
+  </div>
+</div>

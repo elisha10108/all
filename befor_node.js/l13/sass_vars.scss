@@ -1,0 +1,40 @@
+@import "my_sass/my_vars";
+@import "my_sass/my_func";
+
+body{
+  margin:0;
+  background: $bg;
+  font-family: $font;
+}
+
+.container{
+  @include allContainer(0 auto,500px,$bgCont,40px);
+  // selecotor
+  h2{
+    color:red;
+  }
+  main{
+    width:50%;
+    border:3px solid blue;
+    h3{
+      color:blue;
+    }
+
+    .box{
+      width:200px;
+      height: 200px;
+      background: orange;
+    }
+
+    
+  }
+}
+
+
+.box2{
+    @extend .box;
+    //!important - גם אם יש סלקטור יותר ספציפי
+    // הסלקטור הנל יקבע על המאפיין 
+  background: red !important;
+  
+}

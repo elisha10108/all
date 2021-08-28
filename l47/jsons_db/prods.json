@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "605b2cbab2f5b714544e5267"
+  },
+  "date_created": {
+    "$date": "2021-03-24T12:11:46.350Z"
+  },
+  "name": "pizza b",
+  "info": "good pizza from italy",
+  "img": "",
+  "price": 30,
+  "qty": 99999,
+  "category_s_id": 1,
+  "tags": "food",
+  "comments": "",
+  "user_id": "605b23c97b1e5c1254e294ea",
+  "s_id": 57251,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606d5751fe1bfd0b58cc15ac"
+  },
+  "date_created": {
+    "$date": "2021-04-07T06:51:20.993Z"
+  },
+  "name": "burger",
+  "info": "best burger in the world",
+  "img": "",
+  "price": 30,
+  "qty": 99999,
+  "category_s_id": 1,
+  "tags": "food , burger",
+  "comments": "",
+  "user_id": "605b23c97b1e5c1254e294ea",
+  "s_id": 489383,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "606d57d5fe1bfd0b58cc15ad"
+  },
+  "date_created": {
+    "$date": "2021-04-07T06:51:20.993Z"
+  },
+  "name": "Truck toy",
+  "info": "Truck toy for kids",
+  "img": "",
+  "price": 70,
+  "qty": 99999,
+  "category_s_id": 3,
+  "tags": "truck, cars",
+  "comments": "",
+  "user_id": "605b23c97b1e5c1254e294ea",
+  "s_id": 735989,
+  "__v": 0
+}]

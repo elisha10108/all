@@ -1,0 +1,60 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  font-family: sans-serif;
+  background: silver;
+}
+
+
+.container{
+  max-width:700px;
+  margin:0 auto;
+  background: white;
+  padding:8px;
+}
+
+/* משפיע רק על בן ישיר שהוא אייץ 2 */
+.container > h2{
+  color:red;
+}
+
+/* האח הראשון מסוג פי שיגיע ישירות
+אחריי תגית אייץ 2 */
+.container h2+p{
+  border:2px solid blue;
+  /* background: yellow; */
+}
+
+/* attribute selector */
+.container img[src="_images/pic2.jpg"]{
+  /* border:4px solid orange; */
+}
+
+/* מחפש באטבריוט שלפני הכוכבית אם יש את הצירוף
+בערך שלו */
+.container img[src*=".png"]{
+  border:4px dashed green;
+}
+
+.container img[width*="15"]{
+  border:4px dashed aqua;
+}
+
+.container > p:first-of-type{
+  background: red;
+}
+
+.container > p:last-of-type{
+  background: greenyellow;
+}
+/* מספר אח מסוג פי בסוגריים */
+/* .container > p:nth-of-type(3){ */
+
+  /* כל פי שלישי ולהתחיל מהראשון */
+.container > p:nth-of-type(3n+1){
+  border:2px solid grey;
+  color:yellow
+}

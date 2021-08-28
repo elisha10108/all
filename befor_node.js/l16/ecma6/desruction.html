@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    const persons_ar = [
+      {name:"koko",age:30,state:"California",city:"ramat gan"},
+      {name:"moshe",age:32,state:"Israel",city:"ramat gan"},
+      {name:"jack",age:31,state:"France",city:"ramat gan"},
+    ]
+
+    window.onload = () => {
+      createAllPersons(persons_ar);
+      
+    }
+
+    const createAllPersons = (_ar) => {
+      _ar.map(item => {
+        // addPerons(item.name,item.age,item.state);
+        //destruction object = פירוק אובייקט למשתנים
+        // לא חייבים לאסוף את כל הפרופס , רק מה שצריך למשל בדוגמא שלנו
+        // לא אספנו את העיר
+        let {name,age,state} = item
+        addPerons(name,age,state);
+      })
+
+      _ar.map(item => {
+        addPeronsDestruction(item)
+      })
+
+      //destruction array
+      let fruits_ar = ["apple","kiwi","mango"];
+
+      let [first,second,third] = fruits_ar;
+      console.log(second)
+    }
+
+    // destruction paramters/arguments
+    // הדיסטרקשן קורא בתוך הפרמטר עצמו במקום לעשות הפוך כמו בשורה 26
+    addPeronsDestruction = ({name,state,city}) => {
+      document.body.innerHTML += `
+        <h2>-- ${name}</h2>
+        <div>city:${city} and state: ${state}</div>
+      `
+    }
+
+
+    const addPerons = (_name,_age,_state) => {
+      document.body.innerHTML += `
+        <h2>${_name}</h2>
+        <div>age:${_age} and state: ${_state}</div>
+      `
+    }
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

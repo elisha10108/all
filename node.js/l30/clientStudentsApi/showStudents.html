@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap5.min.css">
+  <title>Document</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script src="js/appStudents.js"></script>
+  <script src="js/studentsManager.js"></script>
+  <script src="js/newStudent.js"></script>
+  <script src="services/apiService.js"></script>
+  <script src="services/pagenation.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>List of students:</h2>
+    <a href="addStudent.html">Add new student</a>
+    <div id="id_pages"></div>
+    <table class="table table-strip">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>score</th>
+          <th>del</th>
+          <th>edit</th>
+        </tr>
+      </thead>
+      <tbody id="id_tbody">
+        
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

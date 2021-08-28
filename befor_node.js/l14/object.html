@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // אובייקט ליטרלי
+    let cake1 = {
+      name:"orange cake",
+      cal:2500,
+      price:30,
+      renderToHtml:function(){
+        document.body.innerHTML += `<h2>${this.name} - ${this.cal}</h2>`;
+      }
+    }
+
+    let cake2 = {
+      name:"vanila cake",
+      cal:6000,
+      price:60,
+      renderToHtml:function(){
+        document.body.innerHTML += `<h2>${this.name} - ${this.cal}</h2>`;
+      }
+    }
+
+    let cake3 = {
+      name:"chocolate cake",
+      cal:5000,
+      price:50
+    }
+
+    window.onload = function(){
+      cake1.renderToHtml();
+      cake2.renderToHtml();
+    }
+    // הפתרון הראשוני זה לעבוד מול מחלקות ולא להגדיר אובייקטים יחידים
+    //let cake4 = cake3;
+    //cake4.name = "kiwi cake";
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,41 @@
+#include<stdio.h>
+int my_strlen(char str[]);
+void my_strcpy(char dst[], char src[]);
+void my_strcat(char dst[], char src[]);
+
+int main(){
+	char array[100] = { "Hello" };
+	my_strcpy(array, "lalalala");
+	my_strcat(array, " ");
+	my_strcat(array, "lililili");
+	puts(array);
+	system("pause");
+	return 0;
+}
+
+int my_strlen(char str[]){
+	int i = 0;
+	while (str[i]){
+		i++;
+	}
+	return i;
+}
+void my_strcpy(char dst[], char src[]){
+	int i = 0;
+	while (src[i]){
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = 0; //='\0'  =src[i]
+}
+void my_strcat(char dst[], char src[]){
+	int i = 0,j;
+	while (dst[i]){
+		i++;
+	}
+	j = 0;
+	while (src[j]){
+		dst[i++] = src[j++];
+	}
+	dst[i] = '\0';
+}

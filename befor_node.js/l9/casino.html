@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/casino.js"></script>
+  <script>
+    // המשתמש לוחץ על כפתור רול ויקבל מספר רנדומלי
+    // מ 1 עד 6
+    // לפי המספר יוצג לו תמונה של הקוביה הנכונה
+
+    // השחקן מתחיל עם 5 מטבעות
+    // כל לחיצה על הכפתור רול תוריד לו מטבע אחד
+    // כאשר השחקן יקבל בקוביה את הספרה 5 או 6
+    // השחקן ינצח באותו סיבוב ויקבל 2 מטבעות
+    
+    // השחקן לא יכול להשחק אם אין לו מטבעות
+    // ושהוא ילחץ על הכפתור רול יוצג לו הודעה 
+    // GO TO THE BANK
+
+  </script>
+</head>
+<body>
+  <h1>Corona Casino</h1>
+  <h2>Coins: <span id='id_coins'></span></h2>
+  <h2 id="id_win_lose"></h2>
+  <img id="id_img" src="rnd_images/dice1.jpg" width="100">
+  <br>
+  <button onclick="onRollClick()">Roll</button>
+</body>
+</html>

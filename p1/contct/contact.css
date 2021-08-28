@@ -1,0 +1,37 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    min-height: 650px;
+}
+
+h1{
+  font-family: 'pattaya';;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main{
+    min-height: 500px;
+  }
+  
+  main form button {
+      border-radius: 19px;
+   padding: 10px;
+    color:#fa0000;
+    background: rgb(30, 180, 250);
+    transition: 2s;
+    font-size: 15px;
+  }
+  
+  main form button:hover {
+      background: #75bb92;
+    color: rgb(0, 0, 0);
+    font-size: 1em;
+  }
+
+
+
+
+
+ 

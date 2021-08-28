@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    window.onload = () => {
+      showNameAndAge("trump",72);
+      showNameAndAge("koko");
+      showNameAndAge( );
+    } 
+
+    // ברירת מחדל של פרמטרים
+    const showNameAndAge = (_name = "unknown",_age = 40) => {
+      document.body.innerHTML += `name: ${_name}, age: ${_age} <br>`
+    }
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

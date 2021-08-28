@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  background: grey;
+  font-family: sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 500px;
+  background: white;
+  padding: 40px;
+}
+
+.container h2 {
+  color: red;
+}
+
+.container main {
+  width: 50%;
+  border: 3px solid blue;
+}
+
+.container main h3 {
+  color: blue;
+}
+
+.container main .box, .container main .box2 {
+  width: 200px;
+  height: 200px;
+  background: orange;
+}
+
+.box2 {
+  background: red !important;
+}
+/*# sourceMappingURL=sass_vars.css.map */

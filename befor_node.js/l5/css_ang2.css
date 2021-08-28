@@ -1,0 +1,31 @@
+body{
+  background:black;
+  margin:0;
+  font-family: sans-serif;
+}
+
+.container{
+  width:700px;
+  padding:24px;
+  margin:0 auto;
+}
+
+.header{
+  /* בהמשך נכתוב min-height:  */
+  height: 70px;
+  background: silver;
+}
+
+.slider{
+  background: skyblue;
+  color:white;
+}
+
+.main{
+  background:silver;
+}
+
+.main img{
+  float:right;
+  margin-left: 8px;
+}

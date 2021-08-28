@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>List of produtcts:</h1>
+  <div class="row">
+
+
+    {{#each ar}}
+    <div class="col-lg-6 border p-2">
+      <img src="{{image}}" class="w-25 float-start me-2 ">
+      <h2>{{name}}</h2>
+      <div>Price: {{price}}</div>
+    </div>
+    {{/each}}
+
+
+
+  </div>
+</div>

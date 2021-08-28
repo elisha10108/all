@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function init(){
+      
+    }
+
+    function changeH1Red(){
+      document.getElementById("id_h1").style.color = "red";
+    }
+
+    function changeH1Green(){
+      document.getElementById("id_h1").style.color = "green";
+    }
+
+    function changeH1Blue(){
+      document.getElementById("id_h1").style.color = "blue";
+    }
+
+  </script>
+</head>
+<body onload="init()">
+  <h1 id="id_h1">This is colors!</h1>
+  <button onclick="changeH1Red()">change to red</button>
+  <button onclick="changeH1Green()">change to green</button>
+  <button onclick="changeH1Blue()">change to blue</button>
+</body>
+</html>

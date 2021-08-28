@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(() => {
+      // מוסיף לו בן בסוף
+      $("ul").append("<li>D Iran</li>");
+      // מוסיף לו בן בהתחלה
+      $("ul").prepend("<li>C Israel</li>");
+// יוסיף לו אח תגית אחריו
+      $("#id_holland").after("<li>B England</li>")
+ // יוסיף לו אח תגית לפניו     
+      $("#id_holland").before("<li>A Thailand</li>")
+      // יעטוף את התגית בתגית אחרת
+      $("#id_holland").wrap(`<a href="https://monkeys.co.il">`)
+    })
+    // 13:15
+  </script>
+</head>
+<body>
+  <div class="container">
+    <ul>
+      <li>USA</li>
+      <li id="id_holland">Holland</li>
+      <li>Iraq</li>
+    </ul>
+  </div>
+</body>
+</html>

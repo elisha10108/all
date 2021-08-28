@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>List of games</h1>
+  <div class="row">
+    {{#each ar}}
+    <div class="col-lg-4  p-2">
+      <div class="border">
+        <img src="{{background_image}}" class="w-100" >
+        <h3>{{name}}</h3>
+        <div>Date:{{released}}</div>
+      </div>
+    </div>
+    {{/each }}
+  </div>
+</div>
+
+{{!-- 14:48 --}}

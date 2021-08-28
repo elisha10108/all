@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Document</title>
+  <script>
+    window.onload = function(){
+
+    }
+
+    function changeColor(event){
+      //event.target -> האלמנט עצמו שמפעיל את הפונקציה
+      // dataset -> מפנה לאטרביוט שהוספנו לאלמנט בבאדי
+      // dataset.tziva -> יאסוף את האטרביוט data-tziva
+      console.log(event.target.dataset.tziva);
+      // let color = event.target.dataset.tziva;
+      let color = event.target.dataset["tziva"];
+      // let target = event.target.dataset.target;
+      document.querySelector("#id_h1").style.background = color;
+
+    
+    }
+
+
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1 id="id_h1">change color with data</h1>
+    <!-- חובה להעביר את הפרמטר איבנט לפונקציה כדי שנוכל לאסוף
+    ממנה אטרביוטים -->
+    <button data-tziva="red" onclick="changeColor(event)">red</button>
+    <button data-tziva="gold" onclick="changeColor(event)">gold</button>
+    <button data-tziva="blue" onclick="changeColor(event)">blue</button>
+    <button data-tziva="green" onclick="changeColor(event)">green</button>
+    <button data-tziva="grey" data-target="#id_h1" onclick="changeColor(event)">grey</button>
+  </div>
+</body>
+</html>

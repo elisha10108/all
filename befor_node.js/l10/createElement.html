@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="util_js/elem.js"></script>
+  <script>
+    window.onload = function(){
+      addBtn("click 1","ofer")
+      addBtn("click 2","moshe")
+    }
+
+    function addBtn(_txt,_name){
+     // let elemSt = `<button>${_txt}</button>`;
+     // dq("#id_parent").innerHTML += elemSt;
+     // מייצר 
+     let newBtn = document.createElement("button");
+     newBtn.innerHTML = _txt;
+     document.querySelector("#id_parent").appendChild(newBtn);
+
+     // האזנה לאירוע על הכפתור החדש
+     newBtn.addEventListener("mouseover", function(){
+       newBtn.innerHTML = _name;
+      }
+     )
+
+     newBtn.addEventListener("mouseout", function(){
+       newBtn.innerHTML = _txt;
+      }
+     )
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div id="id_parent"> 
+
+    </div>
+  </div>
+</body>
+</html>

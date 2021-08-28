@@ -1,0 +1,31 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  font-family: 'Goldman', cursive;
+  background: silver;
+}
+
+
+.container{
+  max-width:700px;
+  margin:0 auto;
+  background: white;
+  padding:8px;
+}
+
+/* h1{
+  font-family: sans-serif;
+} */
+
+/* 1em = 16px */
+.fa-battery-three-quarters{
+  font-size: 3em;
+  color:orange;
+
+  color: #FFFFFF;
+
+text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+}

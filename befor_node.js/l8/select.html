@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // כמו 
+    // <body onload="init()">
+    // שבג'אווה סקריפט קוראים מאזינים לאיוונט וקרואים לפונקציה
+    // קוראים לה בלי סוגריים
+    window.onload = init;
+
+    function init(){
+      document.querySelector("#id_h1").innerHTML = "hello <button>Koko</button>";
+      onChangeCoin();
+    }
+
+    function onChangeCoin(){
+      document.querySelector("#id_span").innerHTML = // > המשך בשורה הבאה
+      document.querySelector("#id_select").value;
+    }
+
+    function onPicOver(){
+      document.querySelector("#id_img").src = "images/pic3.jpg";
+    }
+
+    function onPicOut(){
+      document.querySelector("#id_img").src = "images/pic1.jpg";
+
+    }
+
+
+  </script>
+</head>
+<body>
+  <h1 id="id_h1">Move your mouse on the pic to see the manager of the worker:</h1>
+  <img id="id_img" src="images/pic1.jpg" alt="worker" onmouseover="onPicOver()" onmouseout="onPicOut()">
+  <h2>Choose coin:</h2>
+  <select id="id_select" onchange="onChangeCoin()">
+    <option value="3.35">USD</option>
+    <option value="3.98">EURO</option>
+    <option value="56,950">BTC</option>
+  </select>
+  <!-- span - תוחם אזור בתגית שרק האזור הזה ישתנה בסי אס אס או ג'אווה ס  -->
+  <h2>You will get <span id="id_span">--</span> NIS</h2>
+</body>
+</html>
